@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import NavBar from "../commun/NavBar";
-import NavBar2 from "../commun/NavBar2";
+import NavBar2 from "../commun/navbar/NavBar";
 
 import "./home.css";
 import isimm1 from "../../assets/isimm1.jpg";

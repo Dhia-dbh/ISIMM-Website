@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
-import "./NavBar2.css";
-import logo from "../../assets/logo2.png";
+import "./NavBar.css";
+import logo from "/src/assets/logo2.png";
 
-const NavBar2 = ({ items }) => {
+const NavBar = ({ items }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("200px"); // Logo Size ISIMM
@@ -57,4 +57,4 @@ const NavBar2 = ({ items }) => {
   );
 };
 
-export default NavBar2;
+export default NavBar;
