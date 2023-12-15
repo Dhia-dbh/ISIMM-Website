@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 
 import NavBar from "../commun/NavBar";
+import NavBar2 from "../commun/NavBar2";
 
 import "./home.css";
-import ListGroup from "./../commun/listGroup";
+import isimm1 from "../../assets/isimm1.jpg";
 
 const navBarItems = [
-  { name: "Etudiants", path: "/etudiant" },
-  { name: "Enseignants", path: "/enseignant" },
-  { name: "Administration", path: "/adminstration" },
+  { name: "Notre Université", path: "/home" },
+  { name: "Administration", path: "/administration" },
+  { name: "Entreprise", path: "/entreprise" },
+  { name: "Vie estudiantine", path: "/vie-estudiantine" },
+  { name: "A propos", path: "/about" },
 ];
 const listGroupItems = [
   { name: "Etudiants", _id: "0" },
@@ -21,20 +24,8 @@ const Home = () => {
   const [selectedItem, setSelectedItem] = useState("Etudiants");
   return (
     <>
-      <header>
-        <NavBar
-          title="Home"
-          itemsLeft={navBarItems}
-          itemsRight={[{ name: "A props", path: "/apropos" }]}
-        />
-      </header>
-      <main>
-        <ListGroup
-          items={listGroupItems}
-          selectedItem={selectedItem}
-          onItemSelect={(item) => setSelectedItem(item.name)}
-        />
-      </main>
+      <NavBar2 items={navBarItems} />
+      <img src={isimm1} alt="Beautiful ISIMM" />
     </>
   );
 };
