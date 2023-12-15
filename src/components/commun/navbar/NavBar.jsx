@@ -46,7 +46,12 @@ const NavBar = ({ items }) => {
             <ul>
               {items.map((item, _key) => (
                 <li key={_key}>
-                  <a href={item.path}>{item.name}</a>
+                  <a
+                    className={scrolled ? "isScrolledText" : "notScrolledText"}
+                    href={item.path}
+                  >
+                    {item.name}{" "}
+                  </a>
                 </li>
               ))}
             </ul>

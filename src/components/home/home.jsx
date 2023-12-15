@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-import NavBar from "../commun/NavBar";
-import NavBar2 from "../commun/navbar/NavBar";
+import NavBar from "../commun/navbar/NavBar";
 
 import "./home.css";
 import isimm1 from "../../assets/isimm1.jpg";
@@ -24,7 +23,7 @@ const Home = () => {
   const [selectedItem, setSelectedItem] = useState("Etudiants");
   return (
     <>
-      <NavBar2 items={navBarItems} />
+      <NavBar items={navBarItems} />
       <img src={isimm1} alt="Beautiful ISIMM" />
     </>
   );
