@@ -6,7 +6,7 @@ import logo from "/src/assets/logo2.png";
 const NavBar = ({ items }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [scrolled, setScrolled] = useState(false);
-  const [logoSize, setLogoSize] = useState("200px"); // Logo Size ISIMM
+  const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +20,7 @@ const NavBar = ({ items }) => {
         setLogoSize("80px");
       } else {
         setScrolled(false);
-        setLogoSize("200px");
+        setLogoSize("150px");
       }
     };
 

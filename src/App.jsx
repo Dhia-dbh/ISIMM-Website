@@ -1,26 +1,30 @@
-// Desc: This is the main entry point for the application
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import NotFound from "./components/commun/not-found";
-import Home from "./components/home/home";
-import "./App.css";
-
-const router = createBrowserRouter([
-  {
-    path: "/home",
-    element: <Home />,
-  },
-  {
-    path: "/*",
-    element: <NotFound />,
-  },
-]);
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
+import Login from './components/Login/login';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/home",
+      element: <Home />,
+    },
+    {
+      path: "/*",
+      element: <NotFound />,
+    },
+  ]);
+  const styles = {
+    //color: "green",
+    borderWidth: 1,
+    borderStyle: "solid"
+  };
   return (
     <>
-      <RouterProvider router={router} />
-    </>
-  );
+    <RouterProvider router={router} />
+  </>
+  )
 }
 
 export default App;
