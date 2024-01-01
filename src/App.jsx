@@ -1,14 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Login from './components/Login/login';
+import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Home from "./components/Home/home";
+import Login from "./components/Login/login";
+import NotFound from "./components/commun/not-found";
+import "./App.css";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/home",
       element: <Home />,
+    },
+    {
+      path: "/Login",
+      element: <Login />,
     },
     {
       path: "/*",
@@ -18,13 +23,13 @@ function App() {
   const styles = {
     //color: "green",
     borderWidth: 1,
-    borderStyle: "solid"
+    borderStyle: "solid",
   };
   return (
     <>
-    <RouterProvider router={router} />
-  </>
-  )
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
 export default App;

@@ -20,7 +20,6 @@ const listGroupItems = [
 ];
 
 const Home = () => {
-  const [selectedItem, setSelectedItem] = useState("Etudiants");
   return (
     <>
       <NavBar items={navBarItems} />
