@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 
-import NavBar from "../commun/navbar/NavBar";
+import NavBar from "../commun/navbar/navBar";
 
 import "./home.css";
+
 import isimm1 from "../../assets/isimm1.jpg";
+
+const vieEstudiantineSubmenu = [
+  { name: "Clubs", path: "/clubs" },
+  { name: "Emploi de Temps", path: "/EmploiDeTemps" },
+];
 
 const navBarItems = [
   { name: "Notre Université", path: "/home" },
   { name: "Administration", path: "/administration" },
   { name: "Entreprise", path: "/entreprise" },
-  { name: "Vie estudiantine", path: "/vie-estudiantine" },
+  {
+    name: "Vie estudiantine",
+    path: "/vie-estudiantine",
+    submenu: vieEstudiantineSubmenu,
+  },
   { name: "A propos", path: "/about" },
 ];
 const listGroupItems = [

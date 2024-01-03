@@ -1,11 +1,14 @@
+import { NavBarItemMenuless } from "./NavBarItemMenuless";
+import NavBarItemMenu from "./navBarItemMenu";
+
 import { useState, useEffect } from "react";
 
-import "./NavBar.css";
+import "./navBar.css";
 import logo from "/src/assets/logo2.png";
 
 const NavBar = ({ items }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [scrolled, setScrolled] = useState(false);
+  const [isScrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
 
   useEffect(() => {
@@ -35,7 +38,7 @@ const NavBar = ({ items }) => {
   return (
     <div className="wrapper">
       <header>
-        <nav className={scrolled ? "isScrolled" : "notScrolled"}>
+        <nav className={isScrolled ? "isScrolled" : "notScrolled"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
@@ -44,16 +47,21 @@ const NavBar = ({ items }) => {
           </div>
           <div className="menu">
             <ul>
-              {items.map((item, _key) => (
-                <li key={_key}>
-                  <a
-                    className={scrolled ? "isScrolledText" : "notScrolledText"}
-                    href={item.path}
-                  >
-                    {item.name}{" "}
-                  </a>
-                </li>
-              ))}
+              {items.map((item, _key) => {
+                return item.submenu ? (
+                  <NavBarItemMenu
+                    _key={_key}
+                    isScrolled={isScrolled}
+                    item={item}
+                  />
+                ) : (
+                  <NavBarItemMenuless
+                    _key={_key}
+                    isScrolled={isScrolled}
+                    item={item}
+                  />
+                );
+              })}
             </ul>
           </div>
         </nav>

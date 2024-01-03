@@ -1,0 +1,10 @@
+.dropDownMenu {
+  display: inline;
+  position: absolute;
+  top: 80px;
+  right: 126px;
+  background-color: #fff;
+  width: max-content;
+  height: fit-content;
+  text-align: left;
+}
