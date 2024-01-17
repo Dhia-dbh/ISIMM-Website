@@ -1,17 +1,6 @@
-
-:root {
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-    /*background-image: url('../../assets/502966.jpg');*/
-
-    background-size: 100%; 
-    /*background-position: center;*/
-  }
-
-#forum_login{
-    height: 500px;
-    width: 400px;
+#forum_register{
+    height: 780px;
+    width: 450px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -19,11 +8,11 @@
     left: 50%;
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(136, 28, 28, 0.1);
+    border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
+    margin: 120px 0px 0px 0px;
 }
-
 form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
@@ -53,14 +42,12 @@ input{
     width: 100%;
     background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
     font-size: 14px;
     font-weight: 400;
 }
 
 ::placeholder{
-    color: #e5e5e5;
+    color: #858080;
 }
 
 legend{

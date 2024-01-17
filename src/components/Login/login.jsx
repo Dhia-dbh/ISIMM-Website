@@ -1,23 +1,11 @@
 import { useState } from 'react';
 import './login.css';
 
+
 function Login() {
-    for(var i=0 ; i<5 ; i++)
-    {
-      console.log(i);
-    }
-    const [count, setCount] = useState(0)
-    const styles = {
-      //color: "green",
-      borderWidth: 1,
-      borderStyle: "solid"
-    };
-    
-  
     return (
-      <div  >
-        
-        <form style={styles} >
+      <div  >    
+        <form id='forum_login' >
           <legend >institut supérieur d'informatique et de mathématiques de monastir</legend>
           <h1>Login</h1>
           
@@ -29,7 +17,8 @@ function Login() {
          <br/>
          <input type='submit' value="Login" ></input>
          <br></br>
-         <a href='https://www.facebook.com/' >first time ?</a>
+         {/* Add navigation to the register page*/}
+         <a href='https://www.youtube.com/watch?v=24rZwis4npw' >first time ?</a>
          <br/>
          <a>Forgot password</a>
         </form>
