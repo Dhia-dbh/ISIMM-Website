@@ -8,7 +8,7 @@ import Home from "./components/home/home";
 import Login from "./components/Login/login";
 import NotFound from "./components/commun/not-found";
 import EtudiantListe from "./components/EtudiantListe";
-import Emploi_etudiant from './components/emploi_etudiant/emploi_etudiant';
+import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
 import "./App.css";
 
 function App() {
