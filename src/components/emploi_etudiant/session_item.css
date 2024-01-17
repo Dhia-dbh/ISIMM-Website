@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+    justify-content: center;
+  }
+
+#salle{
+    color: gray;
+}
+#Prof{
+    color:aquamarine
+}
+#Class{
+    color: blue;
+}

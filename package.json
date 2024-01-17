@@ -13,7 +13,10 @@
     "joi-browser": "^13.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+<<<<<<< HEAD
     "react-icons": "^5.0.1",
+=======
+>>>>>>> 9654098d7a02da0a52c472ed30f158462ddd1a52
     "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
