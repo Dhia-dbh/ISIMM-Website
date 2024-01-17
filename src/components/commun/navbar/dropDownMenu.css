@@ -2,9 +2,16 @@
   display: inline;
   position: absolute;
   top: 80px;
-  right: 126px;
-  background-color: #fff;
+  right: 146px;
   width: max-content;
   height: fit-content;
   text-align: left;
+  transform: translate(9.4%, 3%);
+}
+
+.dropDownMenuScrolled {
+  background-color: #fff;
+}
+.dropDownMenuNotScrolled {
+  background-color: none;
 }

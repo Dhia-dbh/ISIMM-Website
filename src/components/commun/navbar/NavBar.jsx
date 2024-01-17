@@ -10,6 +10,9 @@ const NavBar = ({ items }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
+  const [navBarItemStyle, setNavBarItemStyle] = useState({
+    backgroundColor: "none",
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,11 +37,13 @@ const NavBar = ({ items }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const handleMouseEnter = () => {
+    alert("Mouse Enter");
+  };
   return (
     <div className="wrapper">
       <header>
-        <nav className={isScrolled ? "isScrolled" : "notScrolled"}>
+        <nav className={isScrolled ? "isScrolledNavBar" : "notScrolledNavBar"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
@@ -50,6 +55,7 @@ const NavBar = ({ items }) => {
               {items.map((item, _key) => {
                 return item.submenu ? (
                   <NavBarItemMenu
+                    onHover={handleMouseEnter}
                     _key={_key}
                     isScrolled={isScrolled}
                     item={item}

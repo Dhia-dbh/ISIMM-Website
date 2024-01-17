@@ -1,12 +1,21 @@
 import React from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from "./components/Home/home";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
+import Home from "./components/home/home";
 import Login from "./components/Login/login";
 import NotFound from "./components/commun/not-found";
+import EtudiantListe from "./components/EtudiantListe";
 import "./App.css";
 
 function App() {
   const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Navigate to={"/home"} />,
+    },
     {
       path: "/home",
       element: <Home />,
@@ -14,6 +23,10 @@ function App() {
     {
       path: "/Login",
       element: <Login />,
+    },
+    {
+      path: "/etudiants/etudiantListe",
+      element: <EtudiantListe />,
     },
     {
       path: "/*",
