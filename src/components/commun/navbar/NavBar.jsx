@@ -50,7 +50,7 @@ const NavBar = ({ items }) => {
           <div className="logo">
             <img src={logo} alt="ISIMM" height={logoSize} />
           </div>
-          <div className="menu">
+          <div className="">
             <ul>
               {items.map((item, _key) => {
                 return item.submenu ? (
