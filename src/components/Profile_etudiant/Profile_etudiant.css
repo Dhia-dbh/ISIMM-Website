@@ -1,0 +1,97 @@
+
+
+div {
+    color-scheme: light dark;
+    background-color: #242424;
+  }
+#pfp{
+    max-width: 200;
+    height: 80;
+    background-color: rgb(125, 130, 131);
+
+    margin-right: 50px;
+    
+}
+#Header{
+    display: flex;
+    margin-top: 30px;
+    background-color: rgb(125, 130, 131);
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+#Nom-Prenom{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(125, 130, 131);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#photo_profile{
+    border-radius: 50%;
+}
+#Contact{
+    display: block;
+    padding-top: 35px;
+    align-items: start;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(125, 130, 131);
+}
+#Nivau{
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(125, 130, 131);
+}
+#Grades{
+
+    margin-top: 30px;
+    background-color: rgb(125, 130, 131);
+    border-radius: 10px;
+    margin-left: 150px;
+    margin-right: 80px;
+    width: 500px;
+    height: 450px;
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+}
+#Associative{
+    margin-top: 30px;
+    background-color: rgb(125, 130, 131);
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 150px;
+    width: 500px;
+    height: 450px;
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6); 
+}
+td{
+    margin-bottom: 10px;
+    padding: 30px;
+    
+}
+#Information{
+    display: flex;
+    margin-top: 5px;
+    border-radius: 10px;
+    
+   
+}
+
+#Link:hover {
+    color: rgb(129, 64, 183);
+  }
+#Link:not(:hover){
+    color: rgb(0, 0, 0);
+}
+
+
+#but{
+    display: block;
+    margin: 3px;
+    size: 32px;
+    
+}
