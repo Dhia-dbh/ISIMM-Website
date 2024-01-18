@@ -169,7 +169,7 @@ function Emploi_etudiant(){
         <div>
         <div id="title">
             <p id="uni">Université supérieur d'informatique et du mathématique de Monastir</p>
-            <p id="class">Groupe TD : ING1 INFO TD1 <br/><p id="date">(à partir de 01/09/2024)</p></p>
+            <p id="class">Groupe TD : {TD} <br/><p id="date">(à partir de 01/09/2024)</p></p>
             
         </div>
 <div id="TD">
