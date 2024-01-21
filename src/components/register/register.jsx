@@ -29,8 +29,6 @@ function Register() {
       alert("the request to create the account is sent to your institut admin, you will soon recive the mail of your account creation.");
     }
   }
-
-
     return (
       <div>   
         <form id='forum_register' >

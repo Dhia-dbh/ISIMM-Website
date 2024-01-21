@@ -1,14 +1,3 @@
-
-:root {
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
-    /*background-image: url('../../assets/502966.jpg');*/
-
-    background-size: 100%; 
-    /*background-position: center;*/
-  }
-
 #forum_login{
     height: 500px;
     width: 400px;

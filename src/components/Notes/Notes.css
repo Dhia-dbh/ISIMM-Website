@@ -1,0 +1,66 @@
+
+#Note{
+    margin-top: 30px;
+    background-color: rgb(125, 130, 131);
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 150px;
+    width: 400px;
+    height:250px;
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6); 
+}
+#List-Notes{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(125, 130, 131);
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 150px;
+    
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6); 
+    align-items: center;
+}
+td{
+    margin-bottom: 10px;
+    padding: 30px;
+    
+}
+#Information{
+    display: flex;
+    margin-top: 5px;
+    border-radius: 10px;
+    
+   
+}
+
+#Link:hover {
+    color: rgb(129, 64, 183);
+  }
+#Link:not(:hover){
+    color: rgb(0, 0, 0);
+}
+#page{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: rgb(158, 164, 165);
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 150px;
+    
+    padding: 10px;
+    box-shadow: 0 0 40px rgba(8,7,16,0.6); 
+    align-items: center;
+}
+#buttons{
+
+
+    padding: 5px;
+}
+#but{
+    display: block;
+    margin: 3px;
+    size: 32px;
+    
+}
