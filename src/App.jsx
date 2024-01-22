@@ -10,6 +10,7 @@ import NotFound from "./components/commun/not-found";
 import EtudiantListe from "./components/EtudiantListe";
 import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
 import Profile_etudiant from "./components/Profile_etudiant/Profile_etudiant";
+import Notes from "./components/Notes/Notes";
 import "./App.css";
 
 function App() {
@@ -37,6 +38,10 @@ function App() {
     {
       path: "/etudiants/profile",
       element: <Profile_etudiant />,
+    },
+    {
+      path: "/etudiants/notesg",
+      element: <Notes />,
     },
     {
       path: "/*",
