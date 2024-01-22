@@ -10,6 +10,7 @@ import NotFound from "./components/commun/not-found";
 import EtudiantListe from "./components/EtudiantListe";
 import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
 import Profile_etudiant from "./components/Profile_etudiant/Profile_etudiant";
+import Note_Tab from "./components/Notes/Note_Tab";
 import Notes from "./components/Notes/Notes";
 import "./App.css";
 
@@ -22,10 +23,6 @@ function App() {
     {
       path: "/home",
       element: <Home />,
-    },
-    {
-      path: "/etudiants/profile/Notes",
-      element: <Note_Tab/> ,
     },
     {
       path: "/Login",
@@ -44,7 +41,11 @@ function App() {
       element: <Profile_etudiant />,
     },
     {
-      path: "/etudiants/notesg",
+      path: "/etudiants/notes",
+      element: <Note_Tab />,
+    },
+    {
+      path: "/etudiants/notes2",
       element: <Notes />,
     },
     {

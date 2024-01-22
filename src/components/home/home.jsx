@@ -8,7 +8,8 @@ import isimm1 from "../../assets/isimm1.jpg";
 
 const vieEstudiantineSubmenu = [
   { name: "Profile", path: "/etudiants/profile" },
-  { name: "Cosulter Notes", path: "/etudiants/notes" },
+  { name: "Cosulter Calendrier Examen", path: "/etudiants/examens" },
+  { name: "Cosulter Notes ", path: "/etudiants/notes" },
   { name: "Cosulter Liste Etudiant", path: "/etudiants/etudiantListe" },
   { name: "Clubs", path: "/etudiants/clubs" },
   { name: "Emploi de Temps", path: "/etudiants/emploiDeTemps" },
