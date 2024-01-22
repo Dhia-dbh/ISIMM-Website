@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './emploi_etudiant.css';
 import Session_item from './session_item';
 import logo2 from "../../assets/logo2.png"
-
+import html2pdf from 'html2pdf.js';
 
 function Emploi_etudiant(){
   const [TD, setTD] = useState('NONE');
@@ -12,11 +12,16 @@ function Emploi_etudiant(){
     setTD(selectedOption);
     console.log(TD)
   };
+  const generatePdf = () => {
+    const element = document.getElementById('Tab');
+      html2pdf(element);
+    
+  };
 
   let tab 
   if (TD==="NONE"){
     tab=      
-    <table border={1}>
+    <table class="table table-hover table-dark" border={1}>
     <thead>
       <tr>
         <th>Horaire</th>
@@ -92,7 +97,7 @@ function Emploi_etudiant(){
   else
   {
          tab= 
-  <table border={1}>
+  <table class="table table-hover table-dark" border={1}>
   <thead>
     <tr>
       <th>Horaire</th>
@@ -166,7 +171,7 @@ function Emploi_etudiant(){
 </table>
   }
     return(
-        <div>
+        <div id='page'>
         <div id="title">
             <p id="uni">Université supérieur d'informatique et du mathématique de Monastir</p>
             <p id="class">Groupe TD : {TD} <br/><p id="date">(à partir de 01/09/2024)</p></p>
@@ -232,10 +237,14 @@ function Emploi_etudiant(){
           <option value="MR2-EL-TD1">MR2-EL-TD1</option>
           <option value="MR2-GL-TD1">MR2-GL-TD1</option>
           </select>
+          
 </div>
 
+
         <div id="table">
+        
         {tab}
+        <button class="btn btn-primary" onClick={generatePdf()}>Imprimer</button>
   
 </div>
         </div>

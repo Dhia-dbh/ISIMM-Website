@@ -1,15 +1,11 @@
 import "./login.css";
 
 function Login() {
-  const styles = {
-    //color: "green",
-    borderWidth: 1,
-    borderStyle: "solid",
-  };
 
   return (
-    <div>
-      <form style={styles}>
+    <div >
+    <div id="forum_login" >
+      <form >
         <legend>
           institut supérieur d'informatique et de mathématiques de monastir
         </legend>
@@ -25,8 +21,9 @@ function Login() {
         <br></br>
         <a href="https://www.facebook.com/">first time ?</a>
         <br />
-        <a>Forgot password</a>
+        <a href="https://www.facebook.com/"> Forgot password</a>
       </form>
+    </div>
     </div>
   );
 }

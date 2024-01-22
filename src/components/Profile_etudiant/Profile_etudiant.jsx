@@ -10,9 +10,13 @@ function Profile_etudiant (){
     const [Prenom, setPrenom] = useState("Chebbi")
     const [Nivau, setNivau] = useState("Ing1")
     const [GrpTD, setGrpTD] = useState("TD1")
+
     const Contact= () =>{
         alert("Email : achebbi2002@gmail.com\n num de telph: 58660875 ")
      }
+     const GoToGrades = () => {
+        
+      };
     return(
         <div id='Page'>
         <div id='Header'>
@@ -38,7 +42,7 @@ function Profile_etudiant (){
             <table>
                 <tr>
                     <td><h6>Semestre 1 :</h6></td>
-                    <td><button class="btn btn-success">View Results</button></td>
+                    <td><button class="btn btn-success" onClick={GoToGrades}>View Results</button></td>
                 </tr>
                 <tr>
                     <td><h6>Semestre 2 :</h6></td>

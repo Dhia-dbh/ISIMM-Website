@@ -24,6 +24,10 @@ function App() {
       element: <Home />,
     },
     {
+      path: "/etudiants/profile/Notes",
+      element: <Note_Tab/> ,
+    },
+    {
       path: "/Login",
       element: <Login />,
     },
@@ -59,5 +63,5 @@ function App() {
     </>
   );
 }
-
+//<RouterProvider router={router} />
 export default App;
