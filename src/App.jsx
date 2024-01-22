@@ -1,16 +1,9 @@
-import React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Navigate,
-} from "react-router-dom";
-import Home from "./components/home/home";
-import Login from "./components/Login/login";
-import NotFound from "./components/commun/not-found";
-import EtudiantListe from "./components/EtudiantListe";
-import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
-import Profile_etudiant from "./components/Profile_etudiant/Profile_etudiant";
-import "./App.css";
+import { useState } from 'react'
+import Login from './components/Login/login';
+import Home from './components/home/home';
+import Emploi_etudiant from './components/emploi_etudiant/emploi_etudiant';
+import Profile_etudiant from './components/Profile_etudiant/Profile_etudiant';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -50,7 +43,8 @@ function App() {
   };
   return (
     <>
-      <RouterProvider router={router} />
+    
+      <Profile_etudiant></Profile_etudiant>
     </>
   );
 }
