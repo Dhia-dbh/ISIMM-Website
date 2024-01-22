@@ -11,7 +11,10 @@ import EtudiantListe from "./components/EtudiantListe";
 import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
 import Profile_etudiant from "./components/Profile_etudiant/Profile_etudiant";
 import "./App.css";
+import Note_Tab from  "./components/Notes/Note_Tab";
 import Register from "./components/register/register";
+import List_exama from "./components/Examan/List_examan";
+import List_examan from "./components/Examan/List_examan";
 
 function App() {
   const router = createBrowserRouter([
@@ -22,6 +25,10 @@ function App() {
     {
       path: "/home",
       element: <Home />,
+    },
+    {
+      path: "/etudiants/profile/Notes",
+      element: <Note_Tab/> ,
     },
     {
       path: "/Login",
@@ -51,9 +58,10 @@ function App() {
   };
   return (
     <>
-     <RouterProvider router={router} />
+    <List_examan></List_examan>
+     
     </>
   );
 }
-
+//<RouterProvider router={router} />
 export default App;
