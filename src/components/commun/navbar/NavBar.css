@@ -54,7 +54,7 @@ nav ul {
   text-align: right;
   margin: 0;
   padding-right: 40px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 nav.black ul {
@@ -86,10 +86,20 @@ nav ul li a {
 }
 .isScrolled {
   color: #000;
-  background-color: #fff;
+
   transition: background-color 200ms linear;
 }
 .notScrolled {
+  color: #fff;
+
+  transition: background-color 200ms linear;
+}
+.isScrolledNavBar {
+  color: #000;
+  background-color: #fff;
+  transition: background-color 200ms linear;
+}
+.notScrolledNavBar {
   color: #fff;
   background-color: none;
   transition: background-color 200ms linear;

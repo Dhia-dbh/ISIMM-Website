@@ -1,14 +1,23 @@
 import "./dropDownMenu.css";
 
-const DropDownMenu = ({ isScrolled, isHovered, items }) => {
+const DropDownMenu = ({ isScrolled, items }) => {
   //Only allow the display of submenus if scrolled
-  return isScrolled ? (
-    <ul className="dropDownMenu">
+  return true ? (
+    <ul
+      className={
+        "dropDownMenu " +
+        (isScrolled ? "dropDownMenuScrolled" : "dropDownMenuNotScrolled")
+      }
+    >
       {items.map((item, _key) => {
         return (
           <>
-            <li key={_key} className="">
-              <a key={_key} className={"isScrolledText"} href={item.path}>
+            <li key={_key}>
+              <a
+                key={_key}
+                className={isScrolled ? "isScrolled" : "notScrolled"}
+                href={item.path}
+              >
                 {item.name}
               </a>
             </li>

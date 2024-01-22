@@ -10,6 +10,9 @@ const NavBar = ({ items }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
+  const [navBarItemStyle, setNavBarItemStyle] = useState({
+    backgroundColor: "none",
+  });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +21,7 @@ const NavBar = ({ items }) => {
       setScrollPosition(currentScrollPosition);
 
       // Adjust logo size based on the scroll position
-      if (currentScrollPosition > 400) {
+      if (currentScrollPosition > 300) {
         setScrolled(true);
         setLogoSize("80px");
       } else {
@@ -34,22 +37,25 @@ const NavBar = ({ items }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  const handleMouseEnter = () => {
+    alert("Mouse Enter");
+  };
   return (
     <div className="wrapper">
       <header>
-        <nav className={isScrolled ? "isScrolled" : "notScrolled"}>
+        <nav className={isScrolled ? "isScrolledNavBar" : "notScrolledNavBar"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
           <div className="logo">
-            <img src={logo} alt="ISIMM" height={logoSize} />
+            <img src={logo} alt="ISIMM" onClick={ () => {window.scrollTo({top: 0,behavior: 'smooth', })}} height={logoSize} />
           </div>
-          <div className="menu">
+          <div className="">
             <ul>
               {items.map((item, _key) => {
                 return item.submenu ? (
                   <NavBarItemMenu
+                    onHover={handleMouseEnter}
                     _key={_key}
                     isScrolled={isScrolled}
                     item={item}
