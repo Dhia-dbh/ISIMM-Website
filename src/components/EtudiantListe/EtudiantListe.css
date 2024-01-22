@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 80vw;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: auto;
+  align-items: center;
+  justify-content: flex-start;
+}
+.searchBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.searchBox .inputIcon {
+  position: relative;
+  right: 50px;
+  border: none;
+}
+.searchBox .inputIcon svg path {
+  color: rgba(206, 44, 44, 0.872);
+}
+.searchBar {
+  width: 350px;
+  margin: 25px;
+  border: 1px solid rgba(28, 28, 28, 0.837);
+}
+.searchResults {
+  margin-top: 100px;
+}

@@ -7,9 +7,10 @@ import {
 import Home from "./components/home/home";
 import Login from "./components/Login/login";
 import NotFound from "./components/commun/not-found";
-import EtudiantListe from "./components/EtudiantListe";
+import EtudiantListe from "./components/EtudiantListe/EtudiantListe";
 import Emploi_etudiant from "./components/emploi_etudiant/emploi_etudiant";
 import Profile_etudiant from "./components/Profile_etudiant/Profile_etudiant";
+import List_examan from "./components/Examan/List_examan";
 import Note_Tab from "./components/Notes/Note_Tab";
 import Notes from "./components/Notes/Notes";
 import "./App.css";
@@ -35,6 +36,10 @@ function App() {
     {
       path: "/etudiants/emploiDeTemps",
       element: <Emploi_etudiant />,
+    },
+    {
+      path: "/etudiants/examens",
+      element: <List_examan />,
     },
     {
       path: "/etudiants/profile",
