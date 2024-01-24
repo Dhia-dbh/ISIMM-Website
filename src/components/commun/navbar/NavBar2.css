@@ -42,6 +42,7 @@ nav {
   position: fixed;
   width: 100%;
   line-height: 60px;
+  background-color: #fff;
 }
 
 nav ul {
@@ -83,6 +84,30 @@ nav ul li a {
   cursor: pointer;
   color: #fff;
   display: none;
+}
+.isScrolled {
+  color: #000;
+
+  transition: background-color 200ms linear;
+}
+.notScrolled {
+  color: #fff;
+
+  transition: background-color 200ms linear;
+}
+.isScrolledNavBar {
+  color: #000;
+  background-color: #fff;
+  transition: background-color 200ms linear;
+}
+.notScrolledNavBar {
+  color: #fff;
+  background-color: none;
+  transition: background-color 200ms linear;
+}
+.isScrolledText {
+  color: #000;
+  transition: background-color 200ms linear;
 }
 
 @media (max-width: 786px) {

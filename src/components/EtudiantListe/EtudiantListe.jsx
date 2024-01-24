@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import NavBar2 from "../commun/navbar/NavBar2";
 import { Navigate } from "react-router-dom";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 
@@ -26,38 +27,40 @@ const EtudiantListe = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   return (
-    <div className="container ">
-      <form>
-        <div className="searchBox">
-          <input
-            type="text"
-            className="searchBar"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-          <button onClick={handleSearch} className="inputIcon">
-            <PiMagnifyingGlassBold />
+    <>
+      <NavBar2 />
+      <div className="container ">
+        <form>
+          <div className="searchBox">
+            <input
+              type="text"
+              className="searchBar"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <button onClick={handleSearch} className="inputIcon">
+              <PiMagnifyingGlassBold />
+            </button>
+          </div>
+          <button
+            type="submit"
+            className="btn btn-primary"
+            onClick={handleSearch}
+          >
+            Search
           </button>
-        </div>
-        <button
-          type="submit"
-          className="btn btn-primary"
-          onClick={handleSearch}
-        >
-          Search
-        </button>
-      </form>
-
-      <section className="searchResults">
-        <ul className="list-group">
-          {searchResults.map((person) => (
-            <li key={person.id} className="list-group-item">
-              <a href={"/etudiants/profile/" + person.id}>{person.name}</a>
-            </li>
-          ))}
-        </ul>
-      </section>
-    </div>
+        </form>
+        <section className="searchResults">
+          <ul className="list-group">
+            {searchResults.map((person) => (
+              <li key={person.id} className="list-group-item">
+                <a href={"/etudiants/profile?id=" + person.id}>{person.name}</a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
+    </>
   );
 };
 export default EtudiantListe;
