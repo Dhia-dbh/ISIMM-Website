@@ -1,8 +1,11 @@
 #page{
-    background-color: beige;
-    
-    align-items: center;
-
+    background-color: rgb(57, 130, 193);
+}
+#Nav{
+    background-color: grey;
+    color: black;
+    margin-bottom: 100px;
+    height: 180px;
 }
 .Exam3{
     background-color: rgb(149, 179, 215);
@@ -15,3 +18,17 @@
 #exam{
     align-items: center;
 }
+#foot{
+    height: 100px;
+    background-color:  grey;
+    color: white;
+    align-items: center;
+    
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+.Link{
+    color: rgba(46, 43, 77, 0.614);
+}
+

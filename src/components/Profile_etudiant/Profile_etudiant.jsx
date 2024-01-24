@@ -3,14 +3,31 @@ import './Profile_etudiant.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-
+import NavBar from '../commun/navbar/NavBar';
+import IMG from  "../../assets/isimm3.jpg"
 import isimm1 from "../../assets/pfp.jpg";
 function Profile_etudiant (){
     const [Nom, setNom] = useState("Ahmed")
     const [Prenom, setPrenom] = useState("Chebbi")
     const [Nivau, setNivau] = useState("Ing1")
     const [GrpTD, setGrpTD] = useState("TD1")
-
+    const vieEstudiantineSubmenu = [
+        { name: "Profile", path: "/etudiants/profile" },
+        { name: "Cosulter Liste Etudiant", path: "/etudiants/etudiantListe" },
+        { name: "Clubs", path: "/etudiants/clubs" },
+        { name: "Emploi de Temps", path: "/etudiants/emploiDeTemps" },
+      ];
+      const navBarItems = [
+        { name: "Notre Université", path: "/home" },
+        { name: "Administration", path: "/administration" },
+        { name: "Entreprise", path: "/entreprise" },
+        {
+          name: "Vie estudiantine",
+          path: "/vie-estudiantine",
+          submenu: vieEstudiantineSubmenu,
+        },
+        { name: "A propos", path: "/about" },
+      ];
     const Contact= () =>{
         alert("Email : achebbi2002@gmail.com\n num de telph: 58660875 ")
      }
@@ -18,7 +35,8 @@ function Profile_etudiant (){
         
       };
     return(
-        <div id='Page'>
+        <div id='Page' style={{backgroundImage:IMG}} >
+         <div id='Nav'> <NavBar  items={navBarItems}/></div>
         <div id='Header'>
             <div id='pfp'>
                 <img  src={isimm1} alt='ISIMM' width="150" height="150" id='photo_profile' ></img>
@@ -78,6 +96,15 @@ function Profile_etudiant (){
             </table>
         </div>
         </div>
+        <footer id='foot'>
+
+<p id='pfooter'>copyright &copy; President & Fellows of ISIMM College   
+<br/><a className='Link' href='#'> contact Us</a> 
+<br/><a className='Link' href='#'> Course Policies and Discounts</a> 
+<br/><a className='Link' href='#'>Privacy Policy</a> 
+<br/></p>
+
+</footer>
         </div>
     )
 

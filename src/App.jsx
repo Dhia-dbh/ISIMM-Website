@@ -58,7 +58,8 @@ function App() {
   };
   return (
     <>
-    <List_examan></List_examan>
+    
+    <Profile_etudiant></Profile_etudiant>
      
     </>
   );

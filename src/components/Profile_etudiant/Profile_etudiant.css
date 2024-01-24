@@ -1,17 +1,18 @@
-#Page {
 
+#Page {
+  background-image:"../../assets/isimm1.jpg";
+  size: 100% 100%;
 }
 #pfp {
   max-width: 200;
   height: 80;
-  background-color: rgb(125, 130, 131);
-
+  background-color: rgb(57, 130, 193);
   margin-right: 50px;
 }
 #Header {
   display: flex;
-  margin-top: 30px;
-  background-color: rgb(125, 130, 131);
+  margin-top: 50px;
+  background-color: rgb(57, 130, 193);
   border-radius: 10px;
   margin-left: 150px;
   margin-right: 150px;
@@ -21,7 +22,7 @@
 #Nom-Prenom {
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgb(57, 130, 193);
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -34,16 +35,16 @@
   align-items: start;
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgb(57, 130, 193);
 }
 #Nivau {
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgb(57, 130, 193);
 }
 #Grades {
   margin-top: 30px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgb(57, 130, 193);
   border-radius: 10px;
   margin-left: 150px;
   margin-right: 80px;
@@ -51,10 +52,11 @@
   height: 450px;
   padding: 10px;
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  margin-bottom: 50px;
 }
 #Associative {
   margin-top: 30px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgb(57, 130, 193);
   border-radius: 10px;
   margin-left: 80px;
   margin-right: 150px;
