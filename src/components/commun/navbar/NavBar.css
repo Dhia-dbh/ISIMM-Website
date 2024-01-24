@@ -96,7 +96,7 @@ nav ul li a {
 }
 .isScrolledNavBar {
   color: #000;
-  background-color: #fff;
+  background-color: #f2f2f2;
   transition: background-color 200ms linear;
 }
 .notScrolledNavBar {

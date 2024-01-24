@@ -5,8 +5,8 @@ const DropDownMenu2 = ({ isScrolled, items }) => {
   return true ? (
     <ul
       className={
-        "dropDownMenu " +
-        (isScrolled ? "dropDownMenuScrolled" : "dropDownMenuNotScrolled")
+        "dropDownMenu2 " +
+        (isScrolled ? "dropDownMenuScrolled2" : "dropDownMenuNotScrolled2")
       }
     >
       {items.map((item, _key) => {

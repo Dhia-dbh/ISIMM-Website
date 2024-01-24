@@ -46,7 +46,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-nav ul {
+.isScrolledNavBar2 ul {
   line-height: 60px;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.05);
@@ -56,19 +56,35 @@ nav ul {
   text-align: right;
   margin: 0;
   padding-right: 40px;
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
-
-nav.black ul {
+.isScrolledNavBar2 ul li:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.isScrolledNavBar2 ul li:hover a {
+  color: rgba(0, 0, 0, 1);
+}
+.isScrolledNavBar2 ul li:hover section ul {
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.isScrolledNavBar2 ul li section {
+  z-index: 1112;
+}
+.isScrolledNavBar2 ul li section ul {
+  text-align: left;
+}
+.isScrolledNavBar2.black ul {
   background: #000;
 }
 
-nav ul li {
+.isScrolledNavBar2 ul li {
   display: inline-block;
   padding: 14px 40px;
+  transition: 0.15s ease;
 }
 
-nav ul li a {
+.isScrolledNavBar2 ul li a {
   text-decoration: none;
   color: #fcfcfc;
   font-size: 15px;
@@ -94,12 +110,12 @@ nav ul li a {
     margin-top: 16px;
   }
 
-  nav ul {
+  .isScrolledNavBar2 ul {
     max-height: 0px;
     background: #000;
   }
 
-  nav.black ul {
+  .isScrolledNavBar2.black ul {
     background: #000;
   }
 
@@ -107,7 +123,7 @@ nav ul li a {
     max-height: 34em;
   }
 
-  nav ul li {
+  .isScrolledNavBar2 ul li {
     box-sizing: border-box;
     width: 100%;
     padding: 24px;

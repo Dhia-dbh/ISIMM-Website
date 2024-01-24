@@ -16,7 +16,7 @@ const NavBar2 = () => {
   return (
     <div className="wrapper">
       <header>
-        <nav className={"isScrolledNavBar"}>
+        <nav className={"isScrolledNavBar2"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
