@@ -1,5 +1,5 @@
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
-import NavBarItemMenu from "./navBarItemMenu";
+import NavBarItemMenu2 from "./navBarItemMenu2";
 
 import { useState, useEffect } from "react";
 import items from "../../../Data/navBarItems.json";
@@ -34,7 +34,7 @@ const NavBar2 = () => {
             <ul>
               {items["navBarItems"].map((item, _key) => {
                 return item.submenu ? (
-                  <NavBarItemMenu
+                  <NavBarItemMenu2
                     onHover={handleMouseEnter}
                     _key={_key}
                     isScrolled={true}

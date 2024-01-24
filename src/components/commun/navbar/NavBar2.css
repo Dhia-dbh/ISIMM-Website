@@ -40,15 +40,16 @@ header {
 
 nav {
   position: fixed;
+  top: 0;
   width: 100%;
   line-height: 60px;
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 nav ul {
   line-height: 60px;
   list-style: none;
-  background: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.05);
   overflow: hidden;
   color: #fff;
   padding: 0;
@@ -84,30 +85,6 @@ nav ul li a {
   cursor: pointer;
   color: #fff;
   display: none;
-}
-.isScrolled {
-  color: #000;
-
-  transition: background-color 200ms linear;
-}
-.notScrolled {
-  color: #fff;
-
-  transition: background-color 200ms linear;
-}
-.isScrolledNavBar {
-  color: #000;
-  background-color: #fff;
-  transition: background-color 200ms linear;
-}
-.notScrolledNavBar {
-  color: #fff;
-  background-color: none;
-  transition: background-color 200ms linear;
-}
-.isScrolledText {
-  color: #000;
-  transition: background-color 200ms linear;
 }
 
 @media (max-width: 786px) {

@@ -29,7 +29,7 @@ const EtudiantListe = () => {
   return (
     <>
       <NavBar2 />
-      <div className="container ">
+      <div className="container">
         <form>
           <div className="searchBox">
             <input
