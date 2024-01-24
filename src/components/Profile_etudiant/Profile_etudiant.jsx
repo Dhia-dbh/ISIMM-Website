@@ -20,7 +20,7 @@ function Profile_etudiant (){
         
       };
     return(
-        <div id='Page'>
+        <div id='Page' >
        
         <NavBar2></NavBar2>
         <div id='Header'>
