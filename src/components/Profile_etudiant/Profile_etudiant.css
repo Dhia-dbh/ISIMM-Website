@@ -1,37 +1,33 @@
 #Page {
-margin-top: 10%;
+  margin-top: 10%;
 }
-.Ifoot{
+.Ifoot {
   margin-left: 1%;
   margin-right: 5%;
 }
 #pfp {
   max-width: 200;
   height: 80;
-  background-color: rgb(125, 130, 131);
 
   margin-right: 50px;
 }
-#foot
-{
+#foot {
   margin-top: 4%;
   display: flex;
   justify-items: center;
   align-items: center;
   padding-left: 17%;
   padding-top: 1%;
-  background-color:rgb(125, 130, 131);
-  
+  background-color: rgb(125, 130, 131);
 }
-#sep{
+#sep {
   width: 80%;
   margin-left: 10%;
-  
 }
 #Header {
   display: flex;
   margin-top: 30px;
-  background-color: rgb(125, 130, 131);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   margin-left: 150px;
   margin-right: 150px;
@@ -41,7 +37,6 @@ margin-top: 10%;
 #Nom-Prenom {
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
   margin-left: 50px;
   margin-right: 50px;
 }
@@ -54,16 +49,13 @@ margin-top: 10%;
   align-items: start;
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
 }
 #Nivau {
   margin-left: 100px;
   margin-right: 100px;
-  background-color: rgb(125, 130, 131);
 }
 #Grades {
   margin-top: 30px;
-  background-color: rgb(125, 130, 131);
   border-radius: 10px;
   margin-left: 150px;
   margin-right: 80px;
@@ -71,10 +63,11 @@ margin-top: 10%;
   height: 450px;
   padding: 10px;
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 #Associative {
   margin-top: 30px;
-  background-color: rgb(0, 0, 0,0.5);
+  background-color: rgba(0,0,0,0.2);
   border-radius: 10px;
   margin-left: 80px;
   margin-right: 150px;
@@ -106,13 +99,13 @@ td {
   size: 32px;
 }
 
-#git:hover{
+#git:hover {
   color: whitesmoke;
   padding: auto;
 }
-#facebook:hover{
+#facebook:hover {
   color: rgb(8, 102, 255);
 }
-#linkedin:hover{
+#linkedin:hover {
   color: rgb(10, 102, 194);
 }
