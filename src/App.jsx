@@ -58,6 +58,7 @@ function App() {
       path: "/*",
       element: <NotFound />,
     },
+    { path: "/actualites", element: <Actual /> },
   ]);
   const styles = {
     //color: "green",
@@ -66,8 +67,7 @@ function App() {
   };
   return (
     <>
-     <RouterProvider router={router} />
-     
+      <RouterProvider router={router} />
     </>
   );
 }

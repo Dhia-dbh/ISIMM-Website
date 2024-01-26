@@ -17,6 +17,7 @@ const vieEstudiantineSubmenu = [
 
 const navBarItems = [
   { name: "Notre Université", path: "/home" },
+  { name: "Actuailités", path: "/actualites" },
   { name: "Administration", path: "/administration" },
   { name: "Entreprise", path: "/entreprise" },
   {
