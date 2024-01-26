@@ -69,9 +69,11 @@ function Profile_etudiant() {
                 <h6>Semestre 1 :</h6>
               </td>
               <td>
-                <button class="btn btn-success" onClick={GoToGrades}>
-                  View Results
-                </button>
+                <a href="/etudiants/notes">
+                  <button class="btn btn-success" onClick={GoToGrades}>
+                    View Results
+                  </button>
+                </a>
               </td>
             </tr>
             <tr>
