@@ -21,14 +21,14 @@ const NavBar2 = () => {
             <i className="fa fa-bars fa-2x"></i>
           </div>
           <div className="logo">
-            <img
-              src={logo}
-              alt="ISIMM"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }}
-              height={logoSize}
-            />
+            <a href="/home">
+              <img
+                src={logo}
+                alt="ISIMM"
+                style={{ cursor: "pointer" }}
+                height={logoSize}
+              />
+            </a>
           </div>
           <div className="">
             <ul>

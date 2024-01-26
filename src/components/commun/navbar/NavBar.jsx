@@ -51,6 +51,7 @@ const NavBar = ({ items }) => {
             <img
               src={logo}
               alt="ISIMM"
+              style={{ cursor: "pointer" }}
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
