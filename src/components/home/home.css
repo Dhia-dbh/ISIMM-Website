@@ -6,3 +6,30 @@
 img {
   width: 100%;
 }
+.actualiteHolder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.actualiteItem {
+  margin-bottom: 20px;
+  width: 20vw;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.actualiteDescription {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+.actualiteDescription p {
+  height: fit-content;
+  width: fit-content;
+}

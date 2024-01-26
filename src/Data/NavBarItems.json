@@ -19,5 +19,11 @@
       ]
     },
     { "name": "A propos", "path": "/about" }
-  ]
+  ],
+  "Actualité": {
+    "title": "Notes",
+    "description": "Consulter vos notes",
+    "link": "hfjsdklhfjklds",
+    "keywords": "eutidant notes"
+  }
 }

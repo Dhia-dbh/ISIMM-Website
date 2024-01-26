@@ -32,12 +32,43 @@ const listGroupItems = [
   { name: "Documents", _id: "2" },
   { name: "Lois", _id: "3" },
 ];
+const actualiteItems = [
+  {
+    title: "Notes",
+    description: "Consulter vos notes",
+    keywords: "etudiant note",
+  },
+  {
+    title: "Calendrier Examen",
+    description: "Consulter calendrier Examen",
+    keywords: "etudiant examen",
+  },
+  {
+    title: "Paiement Tranche Trimestre 2",
+    description:
+      "Veuillez payer la deuxieme tranche de l'anneé universitaire 2023-2024",
+    keywords: "etudiant paiement",
+  },
+];
 
 const Home = () => {
   return (
     <>
       <NavBar items={navBarItems} />
       <img src={isimm1} alt="Beautiful ISIMM" />
+      <section style={{ minHeight: "100px" }}>
+        <h2 className="title mt-5 mb-5">Actualité</h2>
+        <div className="actualiteHolder">
+          {actualiteItems.map((item, index) => (
+            <div key={index} className="actualiteItem">
+              <h4>{item.title}</h4>
+              <div className="actualiteDescription">
+                <p>{item.description} lorem</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </>
   );
 };

@@ -1,7 +1,7 @@
 #Page {
   padding-top: 1%;
-  background-image: url('../../assets/isimm4.jpg');
-  background-size: cover; 
+  background-image: url("../../assets/isimm4.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .Ifoot {
@@ -23,15 +23,15 @@
   align-items: center;
   padding-left: 17%;
   padding-top: 1%;
-  
-  
 }
 #sep {
   width: 80%;
+  margin-top: 10px;
   margin-left: 10%;
+  height: 10px;
+  border-bottom: 1px solid #000;
 }
 #Header {
-  
   display: flex;
   margin-top: 10%;
   background-color: rgb(196, 196, 196);
