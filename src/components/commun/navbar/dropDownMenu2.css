@@ -1,8 +1,9 @@
 .dropDownMenu2 {
   display: inline;
   position: absolute;
+  padding: 0;
   top: 72px;
-  right: 147px;
+  right: 150px;
   width: max-content;
   height: fit-content;
   text-align: left;
@@ -14,4 +15,10 @@
 }
 .dropDownMenuNotScrolled2 {
   background-color: none;
+}
+.dropDownMenu2 li {
+  display: block;
+  width: 100%;
+  padding: 14px 40px;
+  transition: 0.15s ease;
 }

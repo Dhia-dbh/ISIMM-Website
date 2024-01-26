@@ -46,7 +46,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.05);
 }
 
-.isScrolledNavBar2 ul {
+.isScrolledNavBar2 > ul {
   line-height: 60px;
   list-style: none;
   background-color: rgba(0, 0, 0, 0.05);

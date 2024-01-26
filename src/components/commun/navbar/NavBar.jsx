@@ -48,7 +48,14 @@ const NavBar = ({ items }) => {
             <i className="fa fa-bars fa-2x"></i>
           </div>
           <div className="logo">
-            <img src={logo} alt="ISIMM" onClick={ () => {window.scrollTo({top: 0,behavior: 'smooth', })}} height={logoSize} />
+            <img
+              src={logo}
+              alt="ISIMM"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+              height={logoSize}
+            />
           </div>
           <div className="">
             <ul>
