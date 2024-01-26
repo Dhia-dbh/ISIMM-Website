@@ -3,6 +3,11 @@ import './emploi_etudiant.css';
 import Session_item from './session_item';
 import logo2 from "../../assets/logo2.png"
 import html2pdf from 'html2pdf.js';
+import { Navbar } from 'react-bootstrap';
+import NavBar2 from '../commun/navbar/NavBar2';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 function Emploi_etudiant(){
   const [TD, setTD] = useState('NONE');
@@ -21,7 +26,7 @@ function Emploi_etudiant(){
   let tab 
   if (TD==="NONE"){
     tab=      
-    <table class="table table-hover table-dark" border={1}>
+    <table class="table table-striped" border={1}>
     <thead>
       <tr>
         <th>Horaire</th>
@@ -97,7 +102,7 @@ function Emploi_etudiant(){
   else
   {
          tab= 
-  <table class="table table-hover table-dark" border={1}>
+  <table class="table table-striped" border={1}>
   <thead>
     <tr>
       <th>Horaire</th>
@@ -171,7 +176,9 @@ function Emploi_etudiant(){
 </table>
   }
     return(
-        <div id='page'>
+      <div id="B">
+      <NavBar2></NavBar2>
+        <div id='tablee'>
         <div id="title">
             <p id="uni">Université supérieur d'informatique et du mathématique de Monastir</p>
             <p id="class">Groupe TD : {TD} <br/><p id="date">(à partir de 01/09/2024)</p></p>
@@ -179,7 +186,7 @@ function Emploi_etudiant(){
         </div>
 <div id="TD">
 <p>Choisir votre Groupe TD:</p>
-          <select id="nivaux" onChange={handleComboBoxChange}>
+          <select class="form-select" id="nivaux"   onChange={handleComboBoxChange}>
           <option value="NONE">Choisir</option>
           <option value="CPI1-TD1">CPI1-TD1</option>
           <option value="CPI1-TD2">CPI1-TD2</option>
@@ -247,6 +254,15 @@ function Emploi_etudiant(){
         <button class="btn btn-primary" onClick={generatePdf()}>Imprimer</button>
   
 </div>
+        </div>
+        
+        <footer id='foot'>
+            <p className='Ifoot'>Conception, réalisation :<br></br> Ing.Ahmed Chebbi<br></br> Ing.Dhia ben hammouda</p>
+            <p  className='Ifoot'>Téléphone :+216 70 011 920 <br></br>Fax : +216 70 011 959</p>
+            <p  className='Ifoot'>Adress:<br></br> Avenue de la Corniche, Monastir 5000 Tunisie</p>
+            <p className='Ifoot'>Connect With Us <br/><FaGithub id='git' size={23} /> <FaFacebook id='facebook' size={23} /> <FaLinkedin id='linkedin' size={23}/></p>
+            
+        </footer>
         </div>
     )
 }

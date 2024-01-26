@@ -3,6 +3,10 @@ import './Notes.css';
 import { FcApproval } from "react-icons/fc";
 import html2pdf from 'html2pdf.js';
 import { FcHighPriority } from "react-icons/fc";
+import NavBar2 from '../commun/navbar/NavBar2';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 function Note_Tab (){
 
     const [notes,setNotes]=useState([{subject:"Algebre" ,Cofficient:2,	DS1:17,	DS2:null,	TP:16	,Examan_principale:13 ,	Examan_Controle:null}
@@ -213,7 +217,10 @@ function Note_Tab (){
       );
     };
 
-return(<div id='page'>
+return(
+<div id='C'>
+<NavBar2></NavBar2>
+<div id='page'>
 <div><h1>Relevé de Note</h1></div>
 <div>
     <table id='Tab' border={1} class="table table-hover">
@@ -244,6 +251,14 @@ return(<div id='page'>
     
    
 </div>
+</div>
+        <footer id='foot'>
+            <p className='Ifoot'>Conception, réalisation :<br></br> Ing.Ahmed Chebbi<br></br> Ing.Dhia ben hammouda</p>
+            <p  className='Ifoot'>Téléphone :+216 70 011 920 <br></br>Fax : +216 70 011 959</p>
+            <p  className='Ifoot'>Adress:<br></br> Avenue de la Corniche, Monastir 5000 Tunisie</p>
+            <p className='Ifoot'>Connect With Us <br/><FaGithub id='git' size={23} /> <FaFacebook id='facebook' size={23} /> <FaLinkedin id='linkedin' size={23}/></p>
+            
+        </footer>
 </div>
 )
 

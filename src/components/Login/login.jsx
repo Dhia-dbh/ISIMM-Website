@@ -1,17 +1,21 @@
+import NavBar2 from "../commun/navbar/NavBar2";
 import "./login.css";
-
+import isimm1 from "../../assets/logo1.png";
 function Login() {
 
   return (
-    <div >
-    <div id="forum_login" >
+    <div class="background">
+    
+    <div  id="forum_login" >
       <form >
-        <legend>
+      <div class='title'>
+      <img src={isimm1} class='imge'></img>
+        <h5>
           institut supérieur d'informatique et de mathématiques de monastir
-        </legend>
+        </h5></div>
         <h1>Login</h1>
 
-        <label>Login </label>
+        <label>Mail </label>
         <input type="text" placeholder="Flen.Fouleni@gmail.com"></input>
         <br />
         <label>Password </label>

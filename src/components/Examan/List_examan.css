@@ -1,8 +1,29 @@
-#page{
-    background-color: beige;
+#pa{
+    margin-top: 10%;
+    margin-bottom: 30px;
+    background-color:rgb(196, 196, 196);
+    border-radius: 10px;
+    margin-left: 80px;
+    margin-right: 150px;
     
+    
+    padding: 10px;
+    box-shadow: 0 0 40px rgb(8,7,16,0.6); 
     align-items: center;
+}
+#Ex{
+    background-image: url('../../assets/isimm4.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
 
+    height: 100%;
+    padding-top: 1%;
+}
+#Nav{
+    background-color: grey;
+    color: black;
+    margin-bottom: 100px;
+    height: 180px;
 }
 .Exam3{
     background-color: rgb(149, 179, 215);
@@ -15,3 +36,19 @@
 #exam{
     align-items: center;
 }
+#foot{
+    margin-top: 4%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding-left: 17%;
+    padding-top: 1%;
+    background-color: rgb(196, 196, 196);
+}
+.Link{
+    color: rgba(46, 43, 77, 0.614);
+}
+.Ifoot {
+    margin-left: 1%;
+    margin-right: 5%;
+  }

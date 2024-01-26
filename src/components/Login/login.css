@@ -1,6 +1,6 @@
 #forum_login{
     height: 650px;
-    width: 400px;
+    width: 500px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -12,8 +12,49 @@
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
 }
+.background{
+    background-image: url('../../assets/bg.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    animation: diaporamaAnimation 12s infinite;
+}
+.title{
+    display: flex;
+}
+.imge{
+    width: 120px;
+}
 
-
+@keyframes diaporamaAnimation {
+    0% {
+      opacity: 1;
+      background-image: url('../../assets/bg.jpg');
+    }
+  
+    25% {
+      opacity: 1;
+      background-image: url('../../assets/isimm4.jpg');
+    }
+  
+    50% {
+      opacity: 1;
+      background-image: url('../../assets/isimm3.jpg');
+    }
+  
+    75% {
+      opacity: 1;
+      background-image: url('../../assets/isimm5.jpg');
+    }
+  
+    100% {
+      opacity: 1;
+      background-image: url('../../assets/bg.jpg');
+    }
+  }
 
 form *{
     font-family: 'Poppins',sans-serif;
@@ -42,7 +83,7 @@ input{
     display: block;
     height: 50px;
     width: 100%;
-    background-color: rgba(104, 99, 99, 0.094);
+    background-color: rgba(62, 62, 62, 0.314);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -51,7 +92,7 @@ input{
 }
 
 ::placeholder{
-    color: #00000088;
+    color: #000000;
 }
 
 legend{

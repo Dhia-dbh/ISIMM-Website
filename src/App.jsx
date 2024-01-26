@@ -14,6 +14,7 @@ import List_examan from "./components/Examan/List_examan";
 import Note_Tab from "./components/Notes/Note_Tab";
 import Notes from "./components/Notes/Notes";
 import "./App.css";
+import Actual from "./components/actual/actual";
 
 function App() {
   const router = createBrowserRouter([
@@ -65,9 +66,10 @@ function App() {
   };
   return (
     <>
-      <RouterProvider router={router} />
+     <RouterProvider router={router} />
+     
     </>
   );
 }
-//<RouterProvider router={router} />
+//<Actual></Actual>
 export default App;

@@ -42,13 +42,13 @@ td{
     color: rgb(0, 0, 0);
 }
 #page{
-    margin-top: 30px;
+    margin-top: 10%;
     margin-bottom: 30px;
-    background-color: rgb(158, 164, 165);
+    background-color: rgb(204, 204, 204);
     border-radius: 10px;
-    margin-left: 80px;
+    margin-left: 150px;
     margin-right: 150px;
-    
+    margin-top: 9%;
     padding: 10px;
     box-shadow: 0 0 40px rgba(8,7,16,0.6); 
     align-items: center;
@@ -62,5 +62,14 @@ td{
     display: block;
     margin: 3px;
     size: 32px;
+    
+}
+#C{
+    background-image: url('../../assets/isimm4.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+
+    height: 120vh;
+    padding-top: 1%;
     
 }

@@ -1,9 +1,13 @@
 #Page {
-  margin-top: 10%;
+  padding-top: 1%;
+  background-image: url('../../assets/isimm4.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat;
 }
 .Ifoot {
   margin-left: 1%;
   margin-right: 5%;
+  background-color: rgb(196, 196, 196);
 }
 #pfp {
   max-width: 200;
@@ -12,22 +16,25 @@
   margin-right: 50px;
 }
 #foot {
+  background-color: rgb(196, 196, 196);
   margin-top: 4%;
   display: flex;
   justify-items: center;
   align-items: center;
   padding-left: 17%;
   padding-top: 1%;
-  background-color: rgba(0,0,0,0.2);
+  
+  
 }
 #sep {
   width: 80%;
   margin-left: 10%;
 }
 #Header {
+  
   display: flex;
-  margin-top: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 10%;
+  background-color: rgb(196, 196, 196);
   border-radius: 10px;
   margin-left: 150px;
   margin-right: 150px;
@@ -63,11 +70,11 @@
   height: 450px;
   padding: 10px;
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(196, 196, 196);
 }
 #Associative {
   margin-top: 30px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgb(196, 196, 196);
   border-radius: 10px;
   margin-left: 80px;
   margin-right: 150px;
