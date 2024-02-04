@@ -122,10 +122,10 @@ const Home = () => {
       <section style={{ minHeight: "100px" }}>
 
 
-        <div className="aboutUs" >      <div className="ISIMMHolder">
+        <div className="aboutUs" >      <div className="ACCHolder">
           <section className="isimmDescriptionSection">
             <h2 className="title">Accueil</h2>
-            <div className="clubsDescription">
+            <div className="ISIMMDescription">
             <p> Bienvenue sur le site officiel de l’Institut Supérieur d’Informatique et de Mathématiques de Monastir (ISIMM).  
             Cette plateforme vous permet de découvrir les différentes formations assurées par l’ISIMM, la vie-estudiantine, l’entreprenariat avec le milieu socio-économique, le tissu industriel peut intervenir par la proposition des stages et des emplois pour les étudiants et les diplômés de l’ISIMM.
             
