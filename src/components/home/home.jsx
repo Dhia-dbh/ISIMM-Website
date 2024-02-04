@@ -5,6 +5,7 @@ import NavBar from "../commun/navbar/NavBar";
 import "./home.css";
 
 import isimm1 from "../../assets/isimm1.jpg";
+import Footer_1 from "../Footer_1/Footer_1";
 
 const vieEstudiantineSubmenu = [
   { name: "Profile", path: "/etudiants/profile" },
@@ -69,7 +70,13 @@ const Home = () => {
             </div>
           ))}
         </div>
+        
+
+         
+       
       </section>
+
+      <Footer_1></Footer_1>
     </>
   );
 };

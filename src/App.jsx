@@ -15,6 +15,9 @@ import Note_Tab from "./components/Notes/Note_Tab";
 import Notes from "./components/Notes/Notes";
 import "./App.css";
 import Actual from "./components/actual/actual";
+import Entreprise from "./components/Entreprise/Entreprise";
+import Emploi_enseignant from "./components/Emploi_enseignant/Emploi_enseignant";
+import Demande_Doc_Admin from "./components/Doc_Admin/Demande_Doc_Admin";
 
 function App() {
   const router = createBrowserRouter([
@@ -67,9 +70,10 @@ function App() {
   };
   return (
     <>
-      <RouterProvider router={router} />
+   <RouterProvider router={router} />
+      
     </>
   );
 }
-//<Actual></Actual>
+//<RouterProvider router={router} />
 export default App;

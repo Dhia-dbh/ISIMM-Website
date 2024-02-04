@@ -33,3 +33,9 @@ img {
   height: fit-content;
   width: fit-content;
 }
+.Accueil{
+  background-color: rgb(196, 196, 196);
+  border-radius: 24px;
+  width: 50%;
+  margin-left: 6%;
+}

@@ -1,0 +1,36 @@
+.formulaire{
+    margin: 10%;
+    background-color: rgb(196, 196, 196);
+    border-radius: 10px;
+    height: 400px;
+
+
+}
+.champ{
+    display: flex;
+    margin: 10px;
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 55%);
+    
+
+}
+#doc{
+    width: 26%;
+    margin-left: 1%;
+}
+#reason{
+    width: 30%;
+    margin-left: 1%;
+    height: 66%;
+}
+.buttom{
+    margin-top: 3%;
+}
+.L{
+    text-align: right;
+    padding-right: 10px;
+}
