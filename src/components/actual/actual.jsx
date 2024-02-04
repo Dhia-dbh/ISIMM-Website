@@ -91,7 +91,7 @@ function Actual() {
           };
 
           return (
-            <div onClick={openLink} class="element" key={index}>
+            <div onClick={openLink}  key={index}>
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">
