@@ -1,0 +1,14 @@
+div {
+    text-align: center;
+    justify-content: center;
+  }
+
+#salle{
+    color: gray;
+}
+#Prof{
+    color:rgb(44, 209, 41)
+}
+#Class{
+    color: blue;
+}
