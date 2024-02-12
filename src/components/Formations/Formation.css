@@ -1,0 +1,29 @@
+.txt{
+
+
+    padding: 1%;
+    
+}
+#download{
+    margin-bottom: 2%;
+}
+.bgF{
+    background-color: rgb(235, 235, 235);
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 10%;
+    padding-top: 5%;
+    border-radius: 24px;
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 1%;
+}
+.pro{
+    text-align: left;
+}
+.gridf{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 2fr);
+}

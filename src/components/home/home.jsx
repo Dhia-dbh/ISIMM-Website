@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 
+import Carousel from 'react-bootstrap/Carousel';
 import NavBar from "../commun/navbar/NavBar";
-
+import Slider from "react-slick";
 import "./home.css";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import isimm1 from "../../assets/isimm1.jpg";
-import pfp from "../../assets/isimm3.jpg";
+import isimmcous from "../../assets/cours.jpeg" 
+import pfp from "../../assets/amphi.jpg";
 import clubsbg from "../../assets/clubs.png";
 import Footer_1 from "../Footer_1/Footer_1";
 import Grades from "../../assets/grades.jpg";
@@ -17,6 +19,7 @@ import Event from "../../assets/Event.jpg";
 import Exchange from "../../assets/Exchange.jpg";
 import logo from "../../assets/logo.png";
 import Footer from "../commun/footer/footer";
+import NavBar2 from "../commun/navbar/NavBar2";
 
 const vieEstudiantineSubmenu = [
   { name: "Profile", path: "/etudiants/profile" },
@@ -117,8 +120,33 @@ const News = () => {
 const Home = () => {
   return (
     <>
-      <NavBar items={navBarItems} />
-      <img src={isimm1} alt="Beautiful ISIMM" />
+    <div style={{ position: 'fixed', width: '100%', zIndex: 2 }}>
+      <NavBar id="navi" items={navBarItems} />
+      </div>
+      
+      <Carousel id="Carousel" style={{ zIndex: 1 }}>
+      <Carousel.Item>
+        <img height={700} src={isimm1}></img>
+        <Carousel.Caption>
+          <h3>Entrée de ISIMM</h3>
+          
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img height={700} src={pfp}></img>
+        <Carousel.Caption>
+          <h3>Amphi de ISIMM</h3>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img height={700} src={isimmcous}></img>
+        <Carousel.Caption>
+          <h3>Cour de ISIMM</h3>
+
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
       <section style={{ minHeight: "100px" }}>
 
 
@@ -198,7 +226,15 @@ const Home = () => {
           
         </div>
       </section>
-
+      <div className="lastinfo">
+      <div className="location">
+      <h2>Sur la carte</h2>
+      <iframe width={600} height={400} src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.4779705299206!2d10.839891632041052!3d35.763633678456564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x528cc1e524eece77!2sInstitut+Sup%C3%A9rieur+d'Informatique+et+de+Math%C3%A9matiques+de+Monastir!5e0!3m2!1sfr!2sfr!4v1501539942560"  ></iframe>
+      </div>
+      <div className="Show">
+      <h2>Tour dans ISIMM</h2>
+      <iframe width={600} height={400} src="https://www.youtube-nocookie.com/embed/LY-BTpTHmEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""  ></iframe>
+      </div></div>
       <Footer_1/>
     </>
   );

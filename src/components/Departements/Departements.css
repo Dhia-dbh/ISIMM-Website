@@ -1,0 +1,20 @@
+
+.Dept{
+
+
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 20px; /* Adjust the gap between grid items as needed */
+    align-items: center;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.bg{
+    background-color:rgb(196, 196, 196) ;
+    margin-top: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 24px;
+    padding-top: 2%;
+}

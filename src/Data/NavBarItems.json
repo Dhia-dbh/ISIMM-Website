@@ -1,7 +1,7 @@
 {
   "navBarItems": [
     { "name": "Notre Université", "path": "/home" },
-    { "name": "Administration", "path": "/administration" },
+    { "name": "Administration", "path": "/administration"},
     { "name": "Entreprise", "path": "/entreprise" },
     {
       "name": "Vie estudiantine",
