@@ -1,14 +1,14 @@
-div {
-    text-align: center;
-    justify-content: center;
-  }
+.class_details {
+  text-align: center;
+  justify-content: center;
+}
 
-#salle{
-    color: gray;
+.salle {
+  color: gray;
 }
-#Prof{
-    color:rgb(44, 209, 41)
+.prof {
+  color: rgb(44, 209, 41);
 }
-#Class{
-    color: blue;
+.classe {
+  color: blue;
 }

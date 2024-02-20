@@ -58,6 +58,10 @@ function App() {
       element: <Notes />,
     },
     {
+      path: "/entreprise",
+      element: <Entreprise />,
+    },
+    {
       path: "/*",
       element: <NotFound />,
     },
@@ -70,8 +74,7 @@ function App() {
   };
   return (
     <>
-   <RouterProvider router={router} />
-      
+      <RouterProvider router={router} />
     </>
   );
 }

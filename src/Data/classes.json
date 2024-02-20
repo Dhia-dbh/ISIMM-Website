@@ -1,0 +1,134 @@
+{
+  "Courses": {
+    "CPI1": {
+      "CPI1": {
+        "TD1": "CPI1-TD1",
+        "TD2": "CPI1-TD2"
+      }
+    },
+    "CPI2": {
+      "CPI2": {
+        "TD1": "CPI1-TD1",
+        "TD2": "CPI1-TD2"
+      }
+    },
+    "ING1": {
+      "INFO": {
+        "TD1": "ING1-INFO-TD1",
+        "TD2": "ING1-INFO-TD2"
+      },
+      "EL": {
+        "TD1": "ING1-EL-TD1"
+      }
+    },
+    "ING2": {
+      "INFO": {
+        "TD1": "ING2-INFO-TD1"
+      },
+      "EL": {
+        "TD1": "ING2-EL-TD1"
+      }
+    },
+    "ING3": {
+      "EL": {
+        "TD1": "ING3-EL-TD1",
+        "TD2": "ING3-EL-TD2"
+      }
+    },
+    "L1": {
+      "INFO": {
+        "TD1": "L1-INFO-TD1",
+        "TD2": "L1-INFO-TD2",
+        "TD3": "L1-INFO-TD3",
+        "TD4": "L1-INFO-TD4"
+      },
+      "EEA": {
+        "TD1": "L1-EEA-TD1",
+        "TD2": "L1-EEA-TD2",
+        "TD3": "L1-EEA-TD3"
+      },
+      "Math": {
+        "TD1": "L1-Math-TD1"
+      },
+      "TIC": {
+        "TD1": "L1-TIC-TD1",
+        "TD2": "L1-TIC-TD2",
+        "TD3": "L1-TIC-TD3"
+      }
+    },
+    "L2": {
+      "INFO": {
+        "TD1": "L2-INFO-TD1",
+        "TD2": "L2-INFO-TD2",
+        "TD3": "L2-INFO-TD3",
+        "TD4": "L2-INFO-TD4",
+        "TD5": "L2-INFO-TD5"
+      },
+      "Math": {
+        "TD1": "L2-Math-TD1"
+      },
+      "MIM": {
+        "TD1": "L2-MIM-TD1"
+      },
+      "SE": {
+        "TD1": "L2-SE-TD1",
+        "TD2": "L2-SE-TD2"
+      },
+      "TIC": {
+        "TD1": "L2-TIC-TD1",
+        "TD2": "L2-TIC-TD2"
+      }
+    },
+    "L3": {
+      "INFO": {
+        "TD1": "L3-INFO-TD1",
+        "TD2": "L3-INFO-TD2",
+        "TD3": "L3-INFO-TD3",
+        "TD4": "L3-INFO-TD4",
+        "TD5": "L3-INFO-TD5"
+      },
+      "Math": {
+        "TD1": "L3-Math-TD1"
+      },
+      "SE": {
+        "TD1": "L3-SE-TD1",
+        "TD2": "L3-SE-TD2",
+        "TD3": "L3-SE-TD3"
+      },
+      "TIC": {
+        "TD1": "L3-TIC-TD1",
+        "TD2": "L3-TIC-TD2"
+      }
+    },
+    "MP1": {
+      "GL": {
+        "TD1": "MP1-GL-TD1"
+      },
+      "III": {
+        "TD1": "MP1-III-TD1"
+      },
+      "SD": {
+        "TD1": "MP1-SD-TD1"
+      }
+    },
+    "MP2": {
+      "GL": {
+        "TD1": "MP2-GL-TD1"
+      },
+      "III": {
+        "TD1": "MP2-III-TD1"
+      },
+      "SD": {
+        "TD1": "MP2-SD-TD1"
+      }
+    },
+    "MR2": {
+      "EL": {
+        "TD1": "MR2-EL-TD1"
+      },
+      "GL": {
+        "TD1": "MR2-GL-TD1"
+      }
+    }
+  }
+}

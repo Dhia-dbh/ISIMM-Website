@@ -1,32 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import courses from "../../Data/classes.json";
+import SelectItem from "./selectItem";
 import "./emploi_etudiant.css";
 import Session_item from "./session_item";
-import logo2 from "../../assets/logo2.png";
 import html2pdf from "html2pdf.js";
-import { Navbar } from "react-bootstrap";
 import NavBar2 from "../commun/navbar/NavBar2";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
 import Footer1 from "../Footer_1/Footer_1";
 
 function Emploi_etudiant() {
+  //const [coursesData, setCoursesData] = useState([]);
+  const [classe, setClasse] = useState("");
+  const [filiere, setFiliere] = useState("");
   const [TD, setTD] = useState("NONE");
-
-  const handleComboBoxChange = (event) => {
-    const selectedOption = event.target.value;
-    setTD(selectedOption);
-    console.log(TD);
-  };
   const generatePdf = () => {
     const element = document.getElementById("Tab");
     html2pdf(element);
   };
-
   let tab;
   if (TD === "NONE") {
     tab = (
-      <table class="table table-striped" border={1}>
+      <table className="table table-striped" border={1}>
         <thead>
           <tr>
             <th>Horaire</th>
@@ -229,6 +222,18 @@ function Emploi_etudiant() {
       </table>
     );
   }
+  const handleClasseChange = (e) => {
+    setClasse(e.target.value);
+    setFiliere("");
+    setTD("");
+  };
+  const handleFiliereChange = (e) => {
+    setFiliere(e.target.value);
+    setTD("");
+  };
+  const handleTDChange = (e) => {
+    setTD(e.target.value);
+  };
   return (
     <div id="B">
       <NavBar2></NavBar2>
@@ -242,71 +247,35 @@ function Emploi_etudiant() {
             <p id="date">(à partir de 01/09/2024)</p>
           </p>
         </div>
-        <div id="TD">
-          <p>Choisir votre Groupe TD:</p>
-          <select
-            class="form-select"
-            id="nivaux"
-            onChange={handleComboBoxChange}
-          >
-            <option value="NONE">Choisir</option>
-            <option value="CPI1-TD1">CPI1-TD1</option>
-            <option value="CPI1-TD2">CPI1-TD2</option>
-            <option value="CPI1-TD1">CPI2-TD1</option>
-            <option value="CPI1-TD2">CPI2-TD2</option>
-            <option value="ING1-INFO-TD1">ING1-INFO-TD1</option>
-            <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
-            <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
-            <option value="ING1-EL-TD1">ING1-EL-TD1</option>
-            <option value="ING2-INFO-TD1">ING2-INFO-TD1</option>
-            <option value="ING2-EL-TD1">ING2-EL-TD1</option>
-            <option value="ING3-EL-TD1">ING3-EL-TD1</option>
-            <option value="ING3-EL-TD2">ING3-EL-TD2</option>
-            <option value="L1-INFO-TD1">L1-INFO-TD1</option>
-            <option value="L1-INFO-TD2">L1-INFO-TD2</option>
-            <option value="L1-INFO-TD3">L1-INFO-TD3</option>
-            <option value="L1-INFO-TD4">L1-INFO-TD4</option>
-            <option value="L1-EEA-TD1">L1-EEA-TD1</option>
-            <option value="L1-EEA-TD2">L1-EEA-TD2</option>
-            <option value="L1-EEA-TD3">L1-EEA-TD3</option>
-            <option value="L1-Math-TD1">L1-Math-TD1</option>
-            <option value="L1-TIC-TD1">L1-TIC-TD1</option>
-            <option value="L1-TIC-TD2">L1-TIC-TD2</option>
-            <option value="L1-TIC-TD3">L1-TIC-TD3</option>
-            <option value="L2-INFO-TD1">L2-INFO-TD1</option>
-            <option value="L2-INFO-TD2">L2-INFO-TD2</option>
-            <option value="L2-INFO-TD3">L2-INFO-TD3</option>
-            <option value="L2-INFO-TD4">L2-INFO-TD4</option>
-            <option value="L2-INFO-TD5">L2-INFO-TD5</option>
-            <option value="L2-Math-TD1">L2-Math-TD1</option>
-            <option value="L2-MIM-TD1">L2-MIM-TD1</option>
-            <option value="L2-SE-TD1">L2-SE-TD1</option>
-            <option value="L2-SE-TD2">L2-SE-TD2</option>
-            <option value="L2-TIC-TD1">L2-TIC-TD1</option>
-            <option value="L2-TIC-TD2">L2-TIC-TD2</option>
-            <option value="L3-INFO-TD1">L3-INFO-TD1</option>
-            <option value="L3-INFO-TD2">L3-INFO-TD2</option>
-            <option value="L3-INFO-TD3">L3-INFO-TD3</option>
-            <option value="L3-INFO-TD4">L3-INFO-TD4</option>
-            <option value="L3-INFO-TD5">L3-INFO-TD5</option>
-            <option value="L3-Math-TD1">L3-Math-TD1</option>
-            <option value="L3-SE-TD1">L3-SE-TD1</option>
-            <option value="L3-SE-TD2">L3-SE-TD2</option>
-            <option value="L3-SE-TD3">L3-SE-TD3</option>
-            <option value="L3-TIC-TD1">L3-TIC-TD1</option>
-            <option value="L3-TIC-TD2">L3-TIC-TD2</option>
-            <option value="MP1-GL-TD1">MP1-GL-TD1</option>
-            <option value="MP1-III-TD1">MP1-III-TD1</option>
-            <option value="MP1-SD-TD1">MP1-SD-TD1</option>
-            <option value="MP2-GL-TD1">MP2-GL-TD1</option>
-            <option value="MP2-III-TD1">MP2-III-TD1</option>
-            <option value="MP2-SD-TD1">MP2-SD-TD1</option>
-            <option value="MR1-EL-TD1">MR1-EL-TD1</option>
-            <option value="MR1-GL-TD1">MR1-GL-TD1</option>
-            <option value="MR2-EL-TD1">MR2-EL-TD1</option>
-            <option value="MR2-GL-TD1">MR2-GL-TD1</option>
-          </select>
+        <div id="classeSelect" className="selectEmploi">
+          <p>Choisir votre Classe</p>
+
+          <SelectItem
+            items={courses["Courses"]}
+            value={classe}
+            onChange={handleClasseChange}
+          />
         </div>
+        {classe !== "" ? (
+          <div id="filiere" className="selectEmploi">
+            <p>Choisir votre Filière</p>
+            <SelectItem
+              items={courses["Courses"][classe]}
+              value={filiere}
+              onChange={handleFiliereChange}
+            />
+          </div>
+        ) : null}
+        {filiere !== "" ? (
+          <div id="TD" className="selectEmploi">
+            <p>Choisir votre Groupe TD:</p>
+            <SelectItem
+              items={courses["Courses"][classe][filiere]}
+              value={TD}
+              onChange={handleTDChange}
+            />
+          </div>
+        ) : null}
 
         <div id="table">
           {tab}
