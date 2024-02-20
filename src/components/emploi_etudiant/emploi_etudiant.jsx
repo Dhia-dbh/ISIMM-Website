@@ -1,269 +1,323 @@
-import { useState } from 'react';
-import './emploi_etudiant.css';
-import Session_item from './session_item';
-import logo2 from "../../assets/logo2.png"
-import html2pdf from 'html2pdf.js';
-import { Navbar } from 'react-bootstrap';
-import NavBar2 from '../commun/navbar/NavBar2';
+import { useState } from "react";
+import "./emploi_etudiant.css";
+import Session_item from "./session_item";
+import logo2 from "../../assets/logo2.png";
+import html2pdf from "html2pdf.js";
+import { Navbar } from "react-bootstrap";
+import NavBar2 from "../commun/navbar/NavBar2";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
+import Footer1 from "../Footer_1/Footer_1";
 
-function Emploi_etudiant(){
-  const [TD, setTD] = useState('NONE');
+function Emploi_etudiant() {
+  const [TD, setTD] = useState("NONE");
 
   const handleComboBoxChange = (event) => {
     const selectedOption = event.target.value;
     setTD(selectedOption);
-    console.log(TD)
+    console.log(TD);
   };
   const generatePdf = () => {
-    const element = document.getElementById('Tab');
-      html2pdf(element);
-    
+    const element = document.getElementById("Tab");
+    html2pdf(element);
   };
 
-  let tab 
-  if (TD==="NONE"){
-    tab=      
-    <table class="table table-striped" border={1}>
-    <thead>
-      <tr>
-        <th>Horaire</th>
-        <th>8:30_10:00</th>
-        <th>10:15_11:45</th>
-        <th>12:00_13:00</th>
-        <th>13:00_14:30</th>
-        <th>14:45_16:15</th>
-        <th>16:30_18:00</th>
-  
-      </tr>
-     </thead>
-     <tbody>
-       <tr>
-         <td>Lundi</td>
-         <td id="Lundi1" ></td>
-         <td id="Lundi2" ></td>
-         <td id="Lundi3"></td>
-         <td id="Lundi4" ></td>
-         <td id="Lundi5" ></td>
-         <td id="Lundi6" ></td>
-         
-       </tr>
-       <tr>
-         <td>Mardi</td>
-         <td id="Mardi1" ></td>
-         <td id="Mardi2" ></td>
-         <td id="Mardi3" ></td>
-         <td id="Mardi4" ></td>
-         <td id="Mardi5" ></td>
-         <td id="Mardi6" ></td>
-       </tr>
-       <tr>
-         <td>Mercredi</td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-          <td>Jeudi</td>
-          <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-          <td>Vendredi</td>
-          <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-       </tr>
-       <tr>
-          <td>Samedi</td>
-          <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-       </tr>
-       
-    </tbody>
-  </table>
+  let tab;
+  if (TD === "NONE") {
+    tab = (
+      <table class="table table-striped" border={1}>
+        <thead>
+          <tr>
+            <th>Horaire</th>
+            <th>8:30_10:00</th>
+            <th>10:15_11:45</th>
+            <th>12:00_13:00</th>
+            <th>13:00_14:30</th>
+            <th>14:45_16:15</th>
+            <th>16:30_18:00</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lundi</td>
+            <td id="Lundi1"></td>
+            <td id="Lundi2"></td>
+            <td id="Lundi3"></td>
+            <td id="Lundi4"></td>
+            <td id="Lundi5"></td>
+            <td id="Lundi6"></td>
+          </tr>
+          <tr>
+            <td>Mardi</td>
+            <td id="Mardi1"></td>
+            <td id="Mardi2"></td>
+            <td id="Mardi3"></td>
+            <td id="Mardi4"></td>
+            <td id="Mardi5"></td>
+            <td id="Mardi6"></td>
+          </tr>
+          <tr>
+            <td>Mercredi</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Jeudi</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Vendredi</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Samedi</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    );
+  } else {
+    tab = (
+      <table class="table table-striped" border={1}>
+        <thead>
+          <tr>
+            <th>Horaire</th>
+            <th>8:30_10:00</th>
+            <th>10:15_11:45</th>
+            <th>12:00_13:00</th>
+            <th>13:00_14:30</th>
+            <th>14:45_16:15</th>
+            <th>16:30_18:00</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lundi</td>
+            <td id="Lundi1">
+              <Session_item />
+            </td>
+            <td id="Lundi2">
+              <Session_item />
+            </td>
+            <td id="Lundi3"></td>
+            <td id="Lundi4">
+              <Session_item />
+            </td>
+            <td id="Lundi5">
+              <Session_item />
+            </td>
+            <td id="Lundi6">
+              <Session_item />
+            </td>
+          </tr>
+          <tr>
+            <td>Mardi</td>
+            <td id="Mardi1">
+              <Session_item />
+            </td>
+            <td id="Mardi2">
+              <Session_item />
+            </td>
+            <td id="Mardi3"></td>
+            <td id="Mardi4">
+              <Session_item />
+            </td>
+            <td id="Mardi5">
+              <Session_item />
+            </td>
+            <td id="Mardi6">
+              <Session_item />
+            </td>
+          </tr>
+          <tr>
+            <td>Mercredi</td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td></td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+          </tr>
+          <tr>
+            <td>Jeudi</td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td></td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+          </tr>
+          <tr>
+            <td>Vendredi</td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td></td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+          </tr>
+          <tr>
+            <td>Samedi</td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td></td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+            <td>
+              <Session_item />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    );
   }
-  else
-  {
-         tab= 
-  <table class="table table-striped" border={1}>
-  <thead>
-    <tr>
-      <th>Horaire</th>
-      <th>8:30_10:00</th>
-      <th>10:15_11:45</th>
-      <th>12:00_13:00</th>
-      <th>13:00_14:30</th>
-      <th>14:45_16:15</th>
-      <th>16:30_18:00</th>
-
-    </tr>
-   </thead>
-   <tbody>
-     <tr>
-       <td>Lundi</td>
-       <td id="Lundi1" ><Session_item/></td>
-       <td id="Lundi2" ><Session_item/></td>
-       <td id="Lundi3"></td>
-       <td id="Lundi4" ><Session_item/></td>
-       <td id="Lundi5" ><Session_item/></td>
-       <td id="Lundi6" ><Session_item/></td>
-       
-     </tr>
-     <tr>
-       <td>Mardi</td>
-       <td id="Mardi1" ><Session_item/></td>
-       <td id="Mardi2" ><Session_item/></td>
-       <td id="Mardi3" ></td>
-       <td id="Mardi4" ><Session_item/></td>
-       <td id="Mardi5" ><Session_item/></td>
-       <td id="Mardi6" ><Session_item/></td>
-     </tr>
-     <tr>
-       <td>Mercredi</td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-     </tr>
-     <tr>
-        <td>Jeudi</td>
-        <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-     </tr>
-     <tr>
-        <td>Vendredi</td>
-        <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-     </tr>
-     <tr>
-        <td>Samedi</td>
-        <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-       <td><Session_item/></td>
-     </tr>
-     
-  </tbody>
-</table>
-  }
-    return(
-      <div id="B">
+  return (
+    <div id="B">
       <NavBar2></NavBar2>
-        <div id='tablee'>
+      <div id="tablee">
         <div id="title">
-            <p id="uni">Université supérieur d'informatique et du mathématique de Monastir</p>
-            <p id="class">Groupe TD : {TD} <br/><p id="date">(à partir de 01/09/2024)</p></p>
-            
+          <p id="uni">
+            Université supérieur d'informatique et du mathématique de Monastir
+          </p>
+          <p id="class">
+            Groupe TD : {TD} <br />
+            <p id="date">(à partir de 01/09/2024)</p>
+          </p>
         </div>
-<div id="TD">
-<p>Choisir votre Groupe TD:</p>
-          <select class="form-select" id="nivaux"   onChange={handleComboBoxChange}>
-          <option value="NONE">Choisir</option>
-          <option value="CPI1-TD1">CPI1-TD1</option>
-          <option value="CPI1-TD2">CPI1-TD2</option>
-          <option value="CPI1-TD1">CPI2-TD1</option>
-          <option value="CPI1-TD2">CPI2-TD2</option>
-          <option value="ING1-INFO-TD1">ING1-INFO-TD1</option>
-          <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
-          <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
-          <option value="ING1-EL-TD1">ING1-EL-TD1</option>
-          <option value="ING2-INFO-TD1">ING2-INFO-TD1</option>
-          <option value="ING2-EL-TD1">ING2-EL-TD1</option>
-          <option value="ING3-EL-TD1">ING3-EL-TD1</option>
-          <option value="ING3-EL-TD2">ING3-EL-TD2</option>
-          <option value="L1-INFO-TD1">L1-INFO-TD1</option>
-          <option value="L1-INFO-TD2">L1-INFO-TD2</option>
-          <option value="L1-INFO-TD3">L1-INFO-TD3</option>
-          <option value="L1-INFO-TD4">L1-INFO-TD4</option>
-          <option value="L1-EEA-TD1">L1-EEA-TD1</option>
-          <option value="L1-EEA-TD2">L1-EEA-TD2</option>
-          <option value="L1-EEA-TD3">L1-EEA-TD3</option>
-          <option value="L1-Math-TD1">L1-Math-TD1</option>
-          <option value="L1-TIC-TD1">L1-TIC-TD1</option>
-          <option value="L1-TIC-TD2">L1-TIC-TD2</option>
-          <option value="L1-TIC-TD3">L1-TIC-TD3</option>
-          <option value="L2-INFO-TD1">L2-INFO-TD1</option>
-          <option value="L2-INFO-TD2">L2-INFO-TD2</option>
-          <option value="L2-INFO-TD3">L2-INFO-TD3</option>
-          <option value="L2-INFO-TD4">L2-INFO-TD4</option>
-          <option value="L2-INFO-TD5">L2-INFO-TD5</option>
-          <option value="L2-Math-TD1">L2-Math-TD1</option>
-          <option value="L2-MIM-TD1">L2-MIM-TD1</option>
-          <option value="L2-SE-TD1">L2-SE-TD1</option>
-          <option value="L2-SE-TD2">L2-SE-TD2</option>
-          <option value="L2-TIC-TD1">L2-TIC-TD1</option>
-          <option value="L2-TIC-TD2">L2-TIC-TD2</option>
-          <option value="L3-INFO-TD1">L3-INFO-TD1</option>
-          <option value="L3-INFO-TD2">L3-INFO-TD2</option>
-          <option value="L3-INFO-TD3">L3-INFO-TD3</option>
-          <option value="L3-INFO-TD4">L3-INFO-TD4</option>
-          <option value="L3-INFO-TD5">L3-INFO-TD5</option>
-          <option value="L3-Math-TD1">L3-Math-TD1</option>
-          <option value="L3-SE-TD1">L3-SE-TD1</option>
-          <option value="L3-SE-TD2">L3-SE-TD2</option>
-          <option value="L3-SE-TD3">L3-SE-TD3</option>
-          <option value="L3-TIC-TD1">L3-TIC-TD1</option>
-          <option value="L3-TIC-TD2">L3-TIC-TD2</option>
-          <option value="MP1-GL-TD1">MP1-GL-TD1</option>
-          <option value="MP1-III-TD1">MP1-III-TD1</option>
-          <option value="MP1-SD-TD1">MP1-SD-TD1</option>
-          <option value="MP2-GL-TD1">MP2-GL-TD1</option>
-          <option value="MP2-III-TD1">MP2-III-TD1</option>
-          <option value="MP2-SD-TD1">MP2-SD-TD1</option>
-          <option value="MR1-EL-TD1">MR1-EL-TD1</option>
-          <option value="MR1-GL-TD1">MR1-GL-TD1</option>
-          <option value="MR2-EL-TD1">MR2-EL-TD1</option>
-          <option value="MR2-GL-TD1">MR2-GL-TD1</option>
+        <div id="TD">
+          <p>Choisir votre Groupe TD:</p>
+          <select
+            class="form-select"
+            id="nivaux"
+            onChange={handleComboBoxChange}
+          >
+            <option value="NONE">Choisir</option>
+            <option value="CPI1-TD1">CPI1-TD1</option>
+            <option value="CPI1-TD2">CPI1-TD2</option>
+            <option value="CPI1-TD1">CPI2-TD1</option>
+            <option value="CPI1-TD2">CPI2-TD2</option>
+            <option value="ING1-INFO-TD1">ING1-INFO-TD1</option>
+            <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
+            <option value="ING1-INFO-TD2">ING1-INFO-TD2</option>
+            <option value="ING1-EL-TD1">ING1-EL-TD1</option>
+            <option value="ING2-INFO-TD1">ING2-INFO-TD1</option>
+            <option value="ING2-EL-TD1">ING2-EL-TD1</option>
+            <option value="ING3-EL-TD1">ING3-EL-TD1</option>
+            <option value="ING3-EL-TD2">ING3-EL-TD2</option>
+            <option value="L1-INFO-TD1">L1-INFO-TD1</option>
+            <option value="L1-INFO-TD2">L1-INFO-TD2</option>
+            <option value="L1-INFO-TD3">L1-INFO-TD3</option>
+            <option value="L1-INFO-TD4">L1-INFO-TD4</option>
+            <option value="L1-EEA-TD1">L1-EEA-TD1</option>
+            <option value="L1-EEA-TD2">L1-EEA-TD2</option>
+            <option value="L1-EEA-TD3">L1-EEA-TD3</option>
+            <option value="L1-Math-TD1">L1-Math-TD1</option>
+            <option value="L1-TIC-TD1">L1-TIC-TD1</option>
+            <option value="L1-TIC-TD2">L1-TIC-TD2</option>
+            <option value="L1-TIC-TD3">L1-TIC-TD3</option>
+            <option value="L2-INFO-TD1">L2-INFO-TD1</option>
+            <option value="L2-INFO-TD2">L2-INFO-TD2</option>
+            <option value="L2-INFO-TD3">L2-INFO-TD3</option>
+            <option value="L2-INFO-TD4">L2-INFO-TD4</option>
+            <option value="L2-INFO-TD5">L2-INFO-TD5</option>
+            <option value="L2-Math-TD1">L2-Math-TD1</option>
+            <option value="L2-MIM-TD1">L2-MIM-TD1</option>
+            <option value="L2-SE-TD1">L2-SE-TD1</option>
+            <option value="L2-SE-TD2">L2-SE-TD2</option>
+            <option value="L2-TIC-TD1">L2-TIC-TD1</option>
+            <option value="L2-TIC-TD2">L2-TIC-TD2</option>
+            <option value="L3-INFO-TD1">L3-INFO-TD1</option>
+            <option value="L3-INFO-TD2">L3-INFO-TD2</option>
+            <option value="L3-INFO-TD3">L3-INFO-TD3</option>
+            <option value="L3-INFO-TD4">L3-INFO-TD4</option>
+            <option value="L3-INFO-TD5">L3-INFO-TD5</option>
+            <option value="L3-Math-TD1">L3-Math-TD1</option>
+            <option value="L3-SE-TD1">L3-SE-TD1</option>
+            <option value="L3-SE-TD2">L3-SE-TD2</option>
+            <option value="L3-SE-TD3">L3-SE-TD3</option>
+            <option value="L3-TIC-TD1">L3-TIC-TD1</option>
+            <option value="L3-TIC-TD2">L3-TIC-TD2</option>
+            <option value="MP1-GL-TD1">MP1-GL-TD1</option>
+            <option value="MP1-III-TD1">MP1-III-TD1</option>
+            <option value="MP1-SD-TD1">MP1-SD-TD1</option>
+            <option value="MP2-GL-TD1">MP2-GL-TD1</option>
+            <option value="MP2-III-TD1">MP2-III-TD1</option>
+            <option value="MP2-SD-TD1">MP2-SD-TD1</option>
+            <option value="MR1-EL-TD1">MR1-EL-TD1</option>
+            <option value="MR1-GL-TD1">MR1-GL-TD1</option>
+            <option value="MR2-EL-TD1">MR2-EL-TD1</option>
+            <option value="MR2-GL-TD1">MR2-GL-TD1</option>
           </select>
-          
-</div>
-
+        </div>
 
         <div id="table">
-        
-        {tab}
-        <button class="btn btn-primary" onClick={generatePdf()}>Imprimer</button>
-  
-</div>
+          {tab}
+          <button class="btn btn-primary" onClick={generatePdf()}>
+            Imprimer
+          </button>
         </div>
-        
-        <footer id='foot'>
-            <p className='Ifoot'>Conception, réalisation :<br></br> Ing.Ahmed Chebbi<br></br> Ing.Dhia ben hammouda</p>
-            <p  className='Ifoot'>Téléphone :+216 70 011 920 <br></br>Fax : +216 70 011 959</p>
-            <p  className='Ifoot'>Adress:<br></br> Avenue de la Corniche, Monastir 5000 Tunisie</p>
-            <p className='Ifoot'>Connect With Us <br/><FaGithub id='git' size={23} /> <FaFacebook id='facebook' size={23} /> <FaLinkedin id='linkedin' size={23}/></p>
-            
-        </footer>
-        </div>
-    )
+      </div>
+
+      <Footer1 />
+    </div>
+  );
 }
-export default Emploi_etudiant
+export default Emploi_etudiant;
