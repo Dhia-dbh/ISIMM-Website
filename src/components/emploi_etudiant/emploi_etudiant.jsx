@@ -12,6 +12,8 @@ function Emploi_etudiant() {
   const [classe, setClasse] = useState("");
   const [filiere, setFiliere] = useState("");
   const [TD, setTD] = useState("NONE");
+  const [classeFiliereTD, setClasseFiliereTD] = useState("");
+  const [emploi, setEmploi] = useState({});
   const generatePdf = () => {
     const element = document.getElementById("Tab");
     html2pdf(element);
@@ -34,57 +36,83 @@ function Emploi_etudiant() {
         <tbody>
           <tr>
             <td>Lundi</td>
-            <td id="Lundi1"></td>
-            <td id="Lundi2"></td>
-            <td id="Lundi3"></td>
-            <td id="Lundi4"></td>
-            <td id="Lundi5"></td>
-            <td id="Lundi6"></td>
+            {Object.keys(emploi[classeFiliereTD]["monday"]).map((time) => {
+              emploi[classeFiliereTD]["monday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(emploi[classeFiliereTD]["monday"][time])}
+                </td>
+              );
+            })}
           </tr>
           <tr>
             <td>Mardi</td>
-            <td id="Mardi1"></td>
-            <td id="Mardi2"></td>
-            <td id="Mardi3"></td>
-            <td id="Mardi4"></td>
-            <td id="Mardi5"></td>
-            <td id="Mardi6"></td>
+            {Object.keys(emploi[classeFiliereTD]["tuesday"]).map((time) => {
+              emploi[classeFiliereTD]["tuesday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(
+                    emploi[classeFiliereTD]["tuesday"][time]
+                  )}
+                </td>
+              );
+            })}
           </tr>
           <tr>
             <td>Mercredi</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {Object.keys(emploi[classeFiliereTD]["wednesday"]).map((time) => {
+              emploi[classeFiliereTD]["wednesday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(
+                    emploi[classeFiliereTD]["wednesday"][time]
+                  )}
+                </td>
+              );
+            })}
           </tr>
           <tr>
             <td>Jeudi</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {Object.keys(emploi[classeFiliereTD]["thursday"]).map((time) => {
+              emploi[classeFiliereTD]["thursday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(
+                    emploi[classeFiliereTD]["thursday"][time]
+                  )}
+                </td>
+              );
+            })}
           </tr>
           <tr>
             <td>Vendredi</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {Object.keys(emploi[classeFiliereTD]["friday"]).map((time) => {
+              emploi[classeFiliereTD]["friday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(emploi[classeFiliereTD]["friday"][time])}
+                </td>
+              );
+            })}
           </tr>
           <tr>
             <td>Samedi</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            {Object.keys(emploi[classeFiliereTD]["saturday"]).map((time) => {
+              emploi[classeFiliereTD]["saturday"][time] === undefined ? (
+                <td></td>
+              ) : (
+                <td>
+                  {generateSessionItem(
+                    emploi[classeFiliereTD]["saturday"][time]
+                  )}
+                </td>
+              );
+            })}
           </tr>
         </tbody>
       </table>
@@ -232,8 +260,24 @@ function Emploi_etudiant() {
     setTD("");
   };
   const handleTDChange = (e) => {
-    setTD(e.target.value);
+    const td = e.target.value;
+    setTD(td);
+    setClasseFiliereTD(courses["Courses"][classe][filiere][td]);
   };
+  function generateSessionItem(emploiAtTime) {
+    const classe = emploiAtTime["classe"];
+    const prof = emploiAtTime["prof"];
+    const matiere = emploiAtTime["matiere"];
+    const salle = emploiAtTime["salle"];
+    return (
+      <Session_item
+        classe={classe}
+        prof={prof}
+        matiere={matiere}
+        salle={salle}
+      />
+    );
+  }
   return (
     <div id="B">
       <NavBar2></NavBar2>
