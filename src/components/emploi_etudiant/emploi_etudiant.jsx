@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import courses from "../../Data/classes.json";
 import SelectItem from "./selectItem";
 import "./emploi_etudiant.css";
 import Session_item from "./session_item";
@@ -7,19 +6,21 @@ import html2pdf from "html2pdf.js";
 import NavBar2 from "../commun/navbar/NavBar2";
 import Footer1 from "../Footer_1/Footer_1";
 
+import courses from "../../Data/classes.json";
+import emploi from "../../Data/emploi.json";
+
 function Emploi_etudiant() {
   //const [coursesData, setCoursesData] = useState([]);
   const [classe, setClasse] = useState("");
   const [filiere, setFiliere] = useState("");
-  const [TD, setTD] = useState("NONE");
+  const [TD, setTD] = useState("");
   const [classeFiliereTD, setClasseFiliereTD] = useState("");
-  const [emploi, setEmploi] = useState({});
   const generatePdf = () => {
     const element = document.getElementById("Tab");
     html2pdf(element);
   };
   let tab;
-  if (TD === "NONE") {
+  if (TD !== "") {
     tab = (
       <table className="table table-striped" border={1}>
         <thead>
@@ -36,9 +37,10 @@ function Emploi_etudiant() {
         <tbody>
           <tr>
             <td>Lundi</td>
+            {console.log("emploi ->", emploi)}
             {Object.keys(emploi[classeFiliereTD]["monday"]).map((time) => {
-              emploi[classeFiliereTD]["monday"][time] === undefined ? (
-                <td></td>
+              return emploi[classeFiliereTD]["monday"][time] === undefined ? (
+                <td>undefined</td>
               ) : (
                 <td>
                   {generateSessionItem(emploi[classeFiliereTD]["monday"][time])}
@@ -49,7 +51,7 @@ function Emploi_etudiant() {
           <tr>
             <td>Mardi</td>
             {Object.keys(emploi[classeFiliereTD]["tuesday"]).map((time) => {
-              emploi[classeFiliereTD]["tuesday"][time] === undefined ? (
+              return emploi[classeFiliereTD]["tuesday"][time] === undefined ? (
                 <td></td>
               ) : (
                 <td>
@@ -63,7 +65,8 @@ function Emploi_etudiant() {
           <tr>
             <td>Mercredi</td>
             {Object.keys(emploi[classeFiliereTD]["wednesday"]).map((time) => {
-              emploi[classeFiliereTD]["wednesday"][time] === undefined ? (
+              return emploi[classeFiliereTD]["wednesday"][time] ===
+                undefined ? (
                 <td></td>
               ) : (
                 <td>
@@ -77,7 +80,7 @@ function Emploi_etudiant() {
           <tr>
             <td>Jeudi</td>
             {Object.keys(emploi[classeFiliereTD]["thursday"]).map((time) => {
-              emploi[classeFiliereTD]["thursday"][time] === undefined ? (
+              return emploi[classeFiliereTD]["thursday"][time] === undefined ? (
                 <td></td>
               ) : (
                 <td>
@@ -91,7 +94,7 @@ function Emploi_etudiant() {
           <tr>
             <td>Vendredi</td>
             {Object.keys(emploi[classeFiliereTD]["friday"]).map((time) => {
-              emploi[classeFiliereTD]["friday"][time] === undefined ? (
+              return emploi[classeFiliereTD]["friday"][time] === undefined ? (
                 <td></td>
               ) : (
                 <td>
@@ -103,7 +106,7 @@ function Emploi_etudiant() {
           <tr>
             <td>Samedi</td>
             {Object.keys(emploi[classeFiliereTD]["saturday"]).map((time) => {
-              emploi[classeFiliereTD]["saturday"][time] === undefined ? (
+              return emploi[classeFiliereTD]["saturday"][time] === undefined ? (
                 <td></td>
               ) : (
                 <td>
@@ -263,6 +266,7 @@ function Emploi_etudiant() {
     const td = e.target.value;
     setTD(td);
     setClasseFiliereTD(courses["Courses"][classe][filiere][td]);
+    console.log("classeFiliereTD: ", courses["Courses"][classe][filiere][td]);
   };
   function generateSessionItem(emploiAtTime) {
     const classe = emploiAtTime["classe"];
