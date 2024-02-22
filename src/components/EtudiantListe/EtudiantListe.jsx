@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import NavBar2 from "../commun/navbar/NavBar2";
+import Footer1 from "../Footer_1/Footer_1";
 import { Navigate } from "react-router-dom";
 import { PiMagnifyingGlassBold } from "react-icons/pi";
 
@@ -20,14 +21,15 @@ const EtudiantListe = () => {
     setSearchResults(filteredResults);
   };
   const people = [
-    { id: 1, name: "John Doe" },
-    { id: 2, name: "Jane Smith" },
-    { id: 3, name: "Bob Johnson" },
+    { id: 1, name: "Dhia Ben Hamouda" },
+    { id: 2, name: "Ahmed Chebbi" },
+    { id: 3, name: "Wizz Khalifa" },
   ];
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   return (
     <>
+      <div className="etudiantListeBg"></div>
       <NavBar2 />
       <div className="container">
         <form>
@@ -60,6 +62,7 @@ const EtudiantListe = () => {
           </ul>
         </section>
       </div>
+      <Footer1 />
     </>
   );
 };

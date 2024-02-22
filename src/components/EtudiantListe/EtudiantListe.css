@@ -20,6 +20,8 @@
   position: relative;
   right: 50px;
   border: none;
+  background: none;
+  filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
 }
 .searchBox .inputIcon svg path {
   color: rgba(206, 44, 44, 0.872);
@@ -31,4 +33,11 @@
 }
 .searchResults {
   margin-top: 100px;
+}
+.etudiantListeBg {
+  position: fixed;
+  top: 0;
+  height: 87px;
+  width: 100vw;
+  background-color: rgba(214, 214, 214, 1);
 }
