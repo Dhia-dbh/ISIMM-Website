@@ -31,13 +31,9 @@ const NavBarItemMenu2 = ({ _key, isScrolled, item }) => {
       />
       <span>
         {isHovered ? (
-          <MdKeyboardArrowUp
-            style={{ color: isHovered | isScrolled ? "black" : "white" }}
-          />
+          <MdKeyboardArrowUp style={{ color: "black" }} />
         ) : (
-          <MdKeyboardArrowDown
-            style={{ color: isHovered | isScrolled ? "black" : "white" }}
-          />
+          <MdKeyboardArrowDown style={{ color: "white" }} />
         )}
       </span>
 
