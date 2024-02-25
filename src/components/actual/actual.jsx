@@ -56,7 +56,7 @@ function Actual() {
     },
     {
       Title: "notification",
-      Describtion: "Absence collective :). Cry about it ;) + te7chelkom",
+      Describtion: "Absence collective :). Mchitou fiha",
       Link: "formulaire or doc",
       Date: "12/10/2025",
     },
@@ -91,7 +91,7 @@ function Actual() {
           };
 
           return (
-            <div onClick={openLink}  key={index}>
+            <div onClick={openLink} key={index}>
               <div class="flip-card">
                 <div class="flip-card-inner">
                   <div class="flip-card-front">

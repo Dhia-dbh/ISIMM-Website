@@ -167,7 +167,7 @@ const Home = () => {
         <div className="news1">
           <h2 className="title mt-5 mb-5">Actualité</h2>
           {News()}
-          <a id="allnews" href="http://www.isimm.rnu.tn/public/specific_news">
+          <a id="allnews" href="/actualite">
             Tous les Actualité <FaArrowAltCircleRight />
           </a>
           <br />

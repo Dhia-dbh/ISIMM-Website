@@ -62,6 +62,10 @@ function App() {
       element: <Entreprise />,
     },
     {
+      path: "/actualite",
+      element: <Actual />,
+    },
+    {
       path: "/*",
       element: <NotFound />,
     },

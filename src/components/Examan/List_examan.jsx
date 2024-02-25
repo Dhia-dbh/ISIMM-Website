@@ -35,7 +35,7 @@ function List_examan()
         },
         { name: "A propos", path: "/about" },
       ];
-      const render = () => {
+      const renderTableBody = () => {
         return (
           <tbody>
             {Examns.map((e, index) => (
@@ -59,7 +59,7 @@ function List_examan()
     <h2>{Semestre}</h2>
     <h3>Nivau: {Nivaux}</h3>
     <div id='exam' > 
-    <table id='Tab' border={1} class="table">
+    <table id='Tab' border={1} class="examenTable">
     <thead>
     <tr class="table-primary" >
       <th scope="col" >matiere</th>
@@ -68,7 +68,7 @@ function List_examan()
       <th scope="col">Salle</th>
     </tr>
   </thead>
-  {render()}
+  {renderTableBody()}
 </table>
 </div>
     <div><button class="btn btn-dark" onClick={generatePdf}>Download</button></div>

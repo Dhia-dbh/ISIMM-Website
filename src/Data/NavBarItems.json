@@ -10,6 +10,7 @@
       ]
     },
     { "name": "Entreprise", "path": "/entreprise" },
+    { "name": "Actualite", "path": "/actualite" },
     {
       "name": "Vie estudiantine",
       "path": "/vie-estudiantine",
