@@ -22,7 +22,7 @@ function Demande_Doc_Admin() {
           <option value="Lettre d'appui">Lettre d'appui</option>
           </select></div>
           <div className='champ'>
-        <label className='L'>Document demandé:</label>
+        <label className='L'>Raison de la demande:</label>
         <input id='reason' class="form-control" type="text"/>  
         </div>
         <div className='buttom'>

@@ -70,9 +70,24 @@ function App() {
       element: <Notes />,
     },
     {
+      path: "/entreprise",
+      element: <Entreprise />,
+    },
+    {
+      path: "/actualite",
+      element: <Actual />,
+    },
+    {
       path: "/etudiants/clubs",
       element: <Clubs/>,
     },
+    { path: "/administration/documents",
+    element: <Demande_Doc_Admin/>,
+   },
+    { path: "/administration/departements",
+    element: <Departements/>,
+   },
+    
     {
       path: "/*",
       element: <NotFound />,
@@ -86,8 +101,7 @@ function App() {
   };
   return (
     <>
-   <RouterProvider router={router} />
-      
+      <RouterProvider router={router} />
     </>
   );
 }

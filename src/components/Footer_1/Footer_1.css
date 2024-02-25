@@ -1,25 +1,25 @@
-
 #git:hover {
-    color: rgb(91, 90, 90);
-    padding: auto;
-  }
-  #facebook:hover {
-    color: rgb(8, 102, 255);
-  }
-  #linkedin:hover {
-    color: rgb(10, 102, 194);
-  }
+  color: rgb(91, 90, 90);
+  padding: auto;
+}
+#facebook:hover {
+  color: rgb(8, 102, 255);
+}
+#linkedin:hover {
+  color: rgb(10, 102, 194);
+}
 
 #foot {
  
   display: flex;
   justify-items: center;
   align-items: center;
+  margin-top: 500px;
   padding-left: 17%;
   padding-top: 1%;
 }
 .Ifoot {
-    margin-left: 1%;
-    margin-right: 5%;
-    background-color: rgb(196, 196, 196);
-  }
+  margin-left: 1%;
+  margin-right: 5%;
+  background-color: rgb(196, 196, 196);
+}

@@ -24,18 +24,8 @@ function List_examan()
         { name: "Clubs", path: "/etudiants/clubs" },
         { name: "Emploi de Temps", path: "/etudiants/emploiDeTemps" },
       ];
-      const navBarItems = [
-        { name: "Notre Université", path: "/home" },
-        { name: "Administration", path: "/administration" },
-        { name: "Entreprise", path: "/entreprise" },
-        {
-          name: "Vie estudiantine",
-          path: "/vie-estudiantine",
-          submenu: vieEstudiantineSubmenu,
-        },
-        { name: "A propos", path: "/about" },
-      ];
-      const render = () => {
+      
+      const renderTableBody = () => {
         return (
           <tbody>
             {Examns.map((e, index) => (
@@ -59,19 +49,19 @@ function List_examan()
     <h2>{Semestre}</h2>
     <h3>Nivau: {Nivaux}</h3>
     <div id='exam' > 
-    <table id='Tab' border={1} class="table">
+    <table  class="table table-striped" >
     <thead>
-    <tr class="table-primary" >
+    <tr  >
       <th scope="col" >matiere</th>
       <th scope="col" >Date</th>
       <th scope="col">Horaire</th>
       <th scope="col">Salle</th>
     </tr>
   </thead>
-  {render()}
+  {renderTableBody()}
 </table>
 </div>
-    <div><button class="btn btn-dark" onClick={generatePdf}>Download</button></div>
+    <div><button className="btn btn-dark" onClick={generatePdf}>Download</button></div>
     </div>
     
       <footer id='foot'>

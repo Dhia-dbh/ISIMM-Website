@@ -1,15 +1,14 @@
-import { useState } from 'react';
-import './session_item.css';
+import { useState } from "react";
+import "./session_item.css";
 
-function Session_item(){
-    return(
-        <div >
-            <p id="Class">Class</p>
-            <p id="Prof">Prof</p>
-            <p id="Subject">Matiere</p>
-            <p id="salle">Salle</p>
-        </div>
-    )
-
+function Session_item({ classe, prof, matiere, salle }) {
+  return (
+    <>
+      <p className="classe">{classe}</p>
+      <p className="Prof">{prof}</p>
+      <p className="Subject">{matiere}</p>
+      <p className="salle">{salle}</p>
+    </>
+  );
 }
-export default Session_item
+export default Session_item;

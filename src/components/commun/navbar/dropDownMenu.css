@@ -1,12 +1,10 @@
 .dropDownMenu {
-  display: inline;
   position: absolute;
-  top: 72px;
-  right: 114px;
-  width: max-content;
+  padding: 0;
   height: fit-content;
+  width: fit-content;
   text-align: left;
-  transform: translate(9.4%, 3%);
+  transform: translate(-40px, 13px);
 }
 
 .dropDownMenuScrolled {
