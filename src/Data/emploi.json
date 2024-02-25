@@ -1,0 +1,202 @@
+{
+  "CPI1-TD1": {
+    "monday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    },
+    "tuesday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    },
+    "wednesday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    },
+    "thursday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    },
+    "friday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    },
+    "saturday": {
+      "8:30_10:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "10:15_11:45": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "12:00_13:00": {},
+      "13:00_14:30": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "14:45_16:15": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      },
+      "16:30_18:00": {
+        "classe": "CPI1-TD1",
+        "prof": "Dr. Dhia BH",
+        "matiere": "Cyber Security",
+        "salle": "C-17"
+      }
+    }
+  }
+}
