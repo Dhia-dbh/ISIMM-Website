@@ -4,6 +4,9 @@ export default function NavBarItem({ isScrolled, item }) {
     <a
       className={isScrolled ? "isScrolledText" : "notScrolledText"}
       href={item.path}
+      onClick={(e) => {
+        e.preventDefault();
+      }}
     >
       {item.name}{" "}
     </a>
