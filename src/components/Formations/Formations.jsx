@@ -20,28 +20,29 @@ import DS from "../../assets/DATA SCIENCE.jpg"
 function Formations(){
     const [Formations,setFormations]=useState([
     {nom:'INGÉNIEURS ELECTRONIQUE ET MICROÉLECTRONIQUE',img:Tech ,Link:""},
-    {nom:'LICENCE MATHÉMATIQUES APPLIQUÉES',img:Math ,Link:""},
+    {nom:'LICENCE MATHÉMATIQUES APPLIQUÉES',img:Math ,Link:"/formation/LM"},
     {nom:"LICENCE EEA - PARCOURS : SYSTÈMES EMBARQUÉS (SE)",img:SE,Link:""},
     {nom:"LICENCE TIC- PARCOURS: RÉSEAUX ET IOT (RIOT)",img:IOT,Link:""},
-    {nom:"LICENCE EEA - PARCOURS: MESURE INSTRUMENTATION ET MÉTROLOGIE (MIM)",img:MC,Link:""},
+    {nom:"LICENCE EEA - PARCOURS: MESURE INSTRUMENTATION ET MÉTROLOGIE (MIM)",img:MC,Link:"/formation/MIM"},
     {nom:" MASTER PROFESSIONNEL : INGÉNIERIE EN INSTRUMENTATION INDUSTRIELLE" ,img:MI,Link:"" },
     {nom:"LICENCE SCIENCES DE L’INFORMATIQUE",img:LI,Link:""},
     {nom:"INGÉNIEURS INFORMATIQUE",img:IF,Link:""},
     {nom:"INGÉNIERIE EN INSTRUMENTATION INDUSTRIELLE",img:II,Link:""},
-    {nom:"MASTER DE RECHERCHE EN MICROÉLECTRONIQUE ET INSTRUMENTATION",img:IMC,Link:""},
-    {nom:"MASTER DE RECHERCHE EN GÉNIE LOGICIEL",img:GL,Link:""},
+    {nom:"MASTER DE RECHERCHE EN MICROÉLECTRONIQUE ET INSTRUMENTATION",img:IMC,Link:"/formation/MRMI"},
+    {nom:"MASTER DE RECHERCHE EN GÉNIE LOGICIEL",img:GL,Link:"/formation/MRGL"},
     {nom:"MASTER PROFESSIONNEL EN GÉNIE LOGICIEL",img:DS,Link:""},
     {nom:"PRÉPARATOIRE INTÉGRÉ EN INFORMATIQUE",img:Info,Link:""},
     ])
     const renderer=()=>{
         return Formations.map((e, index) => (
+            
             <div class="card" key={index}>
                 <div class="card-body">
                     <img src={e.img} alt={e.nom} height={220} width={210} />
                     
                     <h5 class="card-title">{e.nom}</h5>
                     
-                    <a class="btn btn-primary">Learn More</a>
+                    <a href={e.Link} class="btn btn-primary">Learn More</a>
                 </div>
             </div>
         ));

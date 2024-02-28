@@ -13,7 +13,7 @@
     { "name": "Actualite", "path": "/actualite" },
     {
       "name": "Vie estudiantine",
-      "path": "/vie-estudiantine",
+      "path": "",
       "submenu": [
         { "name": "Profile", "path": "/etudiants/profile" },
         { "name": "Cosulter Calendrier Examen", "path": "/etudiants/examens" },

@@ -43,6 +43,23 @@ function App() {
     }
     ,
     {
+      path: "/formation/LM",
+      element: <FormationLM/>
+    },
+    {
+      path : "/formation/MIM",
+      element: <FormationMIM/>
+    },
+    {
+      path: "/formation/MRGL",
+      element : <FormationMRGL/>
+    },
+    {
+      path : "/formation/MRMI",
+      element : <FormationMRMI/>
+    }
+    ,
+    {
       path: "/Login",
       element: <Login />,
     },
@@ -86,6 +103,8 @@ function App() {
       path: "/etudiants/clubs",
       element: <Clubs/>,
     },
+
+    ,
     { path: "/administration/documents",
     element: <Demande_Doc_Admin/>,
    },

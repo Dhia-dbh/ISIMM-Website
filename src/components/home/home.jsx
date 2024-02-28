@@ -218,11 +218,12 @@ const Home = () => {
             </div>
           </section>
 
-          <section href="/etudiants/clubs" className="clubsLogoSection">
+          <section  className="clubsLogoSection">
+          <a style={{ textDecoration: 'none', color: 'inherit' }} href="/etudiants/clubs">
             <div className="clubsImg">
-              <h1>clubs</h1>
+              <h1 >clubs</h1>
               <img id="clubph" src={clubsbg} alt="Clubs Icon" />
-            </div>
+            </div></a>
           </section>
         </div>
       </section>
