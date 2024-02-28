@@ -13,3 +13,6 @@
 .dropDownMenuNotScrolled {
   background-color: none;
 }
+.drowDownMenuItem {
+  display: block;
+}

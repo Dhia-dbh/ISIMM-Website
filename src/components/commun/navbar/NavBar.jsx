@@ -1,7 +1,7 @@
-import { NavBarItemMenuless } from "./NavBarItemMenuless";
-import NavBarItemMenu from "./navBarItemMenu";
-
 import { useState, useEffect } from "react";
+import NavBarItemMenu from "./navBarItemMenu";
+import { VscThreeBars } from "react-icons/vsc";
+import { NavBarItemMenuless } from "./NavBarItemMenuless";
 
 import "./navBar.css";
 import logo from "/src/assets/logo2.png";
@@ -43,6 +43,7 @@ const NavBar = ({ items, isScrolledHeight }) => {
   return (
     <div className="wrapper">
       <header>
+        <input type="checkbox" name="showNavBar" id="showNavBar" />
         <nav className={isScrolled ? "isScrolledNavBar" : "notScrolledNavBar"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
@@ -75,6 +76,11 @@ const NavBar = ({ items, isScrolledHeight }) => {
                   />
                 );
               })}
+              <li className="showNavBarButton">
+                <label htmlFor="showNavBar">
+                  <VscThreeBars />
+                </label>
+              </li>
             </ul>
           </div>
         </nav>

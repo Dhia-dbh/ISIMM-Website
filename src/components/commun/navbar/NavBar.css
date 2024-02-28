@@ -16,7 +16,10 @@ header {
     no-repeat 50% 50%;
   background-size: cover;
 }
-
+.wrapper {
+  z-index: 2;
+  position: fixed;
+}
 .logo {
   line-height: 60px;
   position: fixed;
@@ -131,7 +134,66 @@ nav ul li a {
   color: #fff;
   transition: background-color 200ms linear;
 }
+.showNavBarButton label {
+  font-size: 36px;
+  margin: 0;
+  display: none;
+}
+#showNavBar {
+  display: none;
+}
 
-@media (max-width: 786px) {
-  
+@media (max-width: 1200px) {
+  nav ul li {
+    display: block;
+    text-align: center;
+  }
+  .wrapper {
+    position: static;
+    height: fit-content;
+    width: 100vw;
+  }
+  nav {
+    position: static;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    position: absolute;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    left: -50px;
+    top: -50px;
+  }
+  br {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+  }
+  .logo img {
+    transform: scale(0.5);
+  }
+  .bigImage {
+    height: fit-content;
+  }
+  .smallImage {
+    height: fit-content;
+  }
+  nav ul {
+    background-color: #464646;
+  }
+  logo {
+    height: 80px;
+  }
+  logo img {
+    height: 100%;
+    width: 100%;
+  }
+  .showNavBarButton {
+    display: block;
+  }
 }

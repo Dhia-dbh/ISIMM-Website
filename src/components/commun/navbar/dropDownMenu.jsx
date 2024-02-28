@@ -12,7 +12,7 @@ const DropDownMenu = ({ isScrolled, items }) => {
       {items.map((item, _key) => {
         return (
           <>
-            <li key={_key}>
+            <li key={_key} className="drowDownMenuItem">
               <a
                 key={_key}
                 className={isScrolled ? "isScrolled" : "notScrolled"}
@@ -21,7 +21,6 @@ const DropDownMenu = ({ isScrolled, items }) => {
                 {item.name}
               </a>
             </li>
-            <br key="line_break" />
           </>
         );
       })}

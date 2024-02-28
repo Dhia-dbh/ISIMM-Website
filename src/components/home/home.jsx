@@ -92,12 +92,10 @@ const carousel_height = 1200;
 const Home = () => {
   return (
     <>
-      <div style={{ position: "fixed", width: "100%", zIndex: "2" }}>
-        <NavBar
-          items={navBarItems["navBarItems"]}
-          isScrolledHeight={carousel_height}
-        />
-      </div>
+      <NavBar
+        items={navBarItems["navBarItems"]}
+        isScrolledHeight={carousel_height}
+      />
       <Carousel id="Carousel" style={{ zIndex: 1 }}>
         <Carousel.Item>
           <img height={1200} src={isimm1}></img>
