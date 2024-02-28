@@ -3,6 +3,7 @@ import './Notes.css';
 import Note_element from './Note_element';
 import { FcApproval } from "react-icons/fc";
 import { FcHighPriority } from "react-icons/fc";
+import Footer_1 from '../Footer_1/Footer_1';
 function Notes() {
 
     return(
@@ -38,7 +39,9 @@ function Notes() {
         <h2>Semestre validé <FcApproval size={35}/></h2>
 
         </div>
-
+<div>
+    
+</div>
         </div>
     )
 

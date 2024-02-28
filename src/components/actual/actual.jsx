@@ -10,6 +10,7 @@ import Emp from "../../assets/emploi-du-temps-en-ligne.jpg";
 import Event from "../../assets/Event.jpg";
 import Exchange from "../../assets/Exchange.jpg";
 import logo from "../../assets/logo.png";
+import Footer_1 from "../Footer_1/Footer_1";
 function Actual() {
   const [N, SetN] = useState([
     {
@@ -119,7 +120,7 @@ function Actual() {
         <h3 id="title">Actualité</h3>
         <div id="grid">{News()}</div>
       </div>
-      <Footer />
+      <Footer_1 />
     </div>
   );
 }

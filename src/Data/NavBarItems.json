@@ -3,7 +3,7 @@
     { "name": "Notre Université", "path": "/home" },
     {
       "name": "Administration",
-      "path": "/administration",
+      "path": "",
       "submenu": [
         { "name": "Documents", "path": "/administration/documents" },
         { "name": "Departements", "path": "/administration/departements" }

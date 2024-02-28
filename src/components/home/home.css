@@ -119,11 +119,17 @@ img {
   right: 15%;
 }
 
+
+
 .clubsImg {
   border: 15px solid #000;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
+#navi{
+  z-index: 999;
+}
+
 .clubsImg:hover {
   border: 15px solid #bb0707;
   rotate: 5;
@@ -221,12 +227,30 @@ img {
   transform: translate(-50%, -10%);
 }
 
+.location{
+  background-color:rgb(196, 196, 196) ;
+  width: 100%;
+  border-radius: 24px;
+  margin-left: 3%;
+  margin-right:2% ;
+  padding: 1%;
+}
+.Show{
+  background-color:rgb(196, 196, 196) ;
+  width: 100%;
+  border-radius: 24px;
+  margin-left: 2%;
+  margin-right:3% ;
+  padding: 1%;
+}
 
+.lastinfo{
+  display: flex;
+}
 
-
-
-
-
+#carousel_slide{
+  margin-top: 8%;
+}
 /*this css code is for the actualité*/
 .news1{
      
@@ -237,6 +261,7 @@ img {
   margin-left: 3%;
   margin-right:3%;
   align-items: center;
+  padding: 1%;
   
 
 }

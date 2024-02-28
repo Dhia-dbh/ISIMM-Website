@@ -18,6 +18,14 @@ import Actual from "./components/actual/actual";
 import Entreprise from "./components/Entreprise/Entreprise";
 import Emploi_enseignant from "./components/Emploi_enseignant/Emploi_enseignant";
 import Demande_Doc_Admin from "./components/Doc_Admin/Demande_Doc_Admin";
+import Clubs from "./components/Clubs/Clubs";
+import Departements from "./components/Departements/Departements";
+import Formation from "./components/Formations/Formation (MIM)";
+import FormationMIM from "./components/Formations/Formation (MIM)";
+import FormationLM from "./components/Formations/Formation (LM)";
+import FormationMRGL from "./components/Formations/Formation (MRGL)";
+import FormationMRMI from "./components/Formations/Formation (MRMI)";
+import Formations from "./components/Formations/Formations";
 
 function App() {
   const router = createBrowserRouter([
@@ -29,6 +37,11 @@ function App() {
       path: "/home",
       element: <Home />,
     },
+    {
+      path: "/formation",
+      element: <Formations/>,
+    }
+    ,
     {
       path: "/Login",
       element: <Login />,
@@ -54,6 +67,10 @@ function App() {
       element: <Note_Tab />,
     },
     {
+      path: "/entreprise",
+      element: <Entreprise />,
+    },    
+    {
       path: "/etudiants/notes2",
       element: <Notes />,
     },
@@ -65,6 +82,17 @@ function App() {
       path: "/actualite",
       element: <Actual />,
     },
+    {
+      path: "/etudiants/clubs",
+      element: <Clubs/>,
+    },
+    { path: "/administration/documents",
+    element: <Demande_Doc_Admin/>,
+   },
+    { path: "/administration/departements",
+    element: <Departements/>,
+   },
+    
     {
       path: "/*",
       element: <NotFound />,

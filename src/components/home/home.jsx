@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import "./home.css";
 
-import Carousel from "react-bootstrap/Carousel";
-import Slider from "react-slick";
+import Carousel from 'react-bootstrap/Carousel';
 import NavBar from "../commun/navbar/NavBar";
 import isimm1 from "../../assets/isimm1.jpg";
-import isimmcous from "../../assets/cours.jpeg";
-import pfp from "../../assets/isimm3.jpg";
+import isimmcous from "../../assets/cours.jpeg" 
+import pfp from "../../assets/amphi.jpg";
 import clubsbg from "../../assets/clubs.png";
 import Footer_1 from "../Footer_1/Footer_1";
 import Grades from "../../assets/grades.jpg";
@@ -180,7 +179,7 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-              <a id="allnews" href="http://www.isimm.rnu.tn/public/formation">
+              <a id="allnews" href="/formation">
                 Voir Plus <FaArrowAltCircleRight />
               </a>
             </section>
