@@ -79,6 +79,7 @@ nav ul {
   margin: 0;
   padding-right: 40px;
   transition: 0.5s;
+  z-index: 2;
 }
 nav .showNavBarButton {
   display: none;

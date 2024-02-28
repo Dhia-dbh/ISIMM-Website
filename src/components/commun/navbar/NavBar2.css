@@ -1,0 +1,14 @@
+.isScrolledNavBar2 {
+  backdrop-filter: blur(10px);
+  top: 0;
+}
+.logo2 {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 120px;
+}
+.logo2 img {
+  height: 100%;
+  width: 100%;
+}

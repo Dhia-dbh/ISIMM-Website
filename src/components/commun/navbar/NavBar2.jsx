@@ -1,4 +1,5 @@
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
+import NavBarItemMenu from "./navBarItemMenu";
 import NavBarItemMenu2 from "./navBarItemMenu2";
 
 import { useState, useEffect } from "react";
@@ -20,7 +21,7 @@ const NavBar2 = () => {
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
-          <div className="logo">
+          <div className="logo2">
             <a href="/home">
               <img
                 src={logo}
@@ -34,7 +35,7 @@ const NavBar2 = () => {
             <ul>
               {items["navBarItems"].map((item, _key) => {
                 return item.submenu ? (
-                  <NavBarItemMenu2
+                  <NavBarItemMenu
                     onHover={handleMouseEnter}
                     _key={_key}
                     isScrolled={true}
