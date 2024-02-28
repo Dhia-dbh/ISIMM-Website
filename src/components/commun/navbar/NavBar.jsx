@@ -58,7 +58,11 @@ const NavBar = ({ items, isScrolledHeight }) => {
               }}
             />
           </div>
-          <div className="">
+          <label className="showNavBarButton" htmlFor="showNavBar">
+            <VscThreeBars />
+          </label>
+          <div className="smallSizeNavBarButtonContainer"></div>
+          <div className="navBarItems">
             <ul>
               {items.map((item, _key) => {
                 return item.submenu ? (
@@ -76,11 +80,6 @@ const NavBar = ({ items, isScrolledHeight }) => {
                   />
                 );
               })}
-              <li className="showNavBarButton">
-                <label htmlFor="showNavBar">
-                  <VscThreeBars />
-                </label>
-              </li>
             </ul>
           </div>
         </nav>

@@ -59,7 +59,9 @@ header {
   width: 100%;
   height: 100%;
 }
-
+.smallSizeNavBarButtonContainer {
+  height: 0;
+}
 nav {
   position: fixed;
   width: 100%;
@@ -77,6 +79,9 @@ nav ul {
   margin: 0;
   padding-right: 40px;
   transition: 0.5s;
+}
+nav .showNavBarButton {
+  display: none;
 }
 
 nav.black ul {
@@ -144,7 +149,27 @@ nav ul li a {
 }
 
 @media (max-width: 1200px) {
-  nav ul li {
+  nav label {
+    position: absolute;
+    float: right;
+    top: -9px;
+    right: 15px;
+    color: black;
+    font-size: 36px;
+  }
+  nav .navBarItems ul {
+    display: none;
+  }
+  nav .navBarItems ul li {
+    display: block;
+  }
+  nav .showNavBarButton {
+    display: block;
+  }
+  .showNavBarButton label {
+    display: block;
+  }
+  #showNavBar:checked ~ nav .navBarItems ul {
     display: block;
     text-align: center;
   }
@@ -195,5 +220,9 @@ nav ul li a {
   }
   .showNavBarButton {
     display: block;
+  }
+  .smallSizeNavBarButtonContainer {
+    height: 100px;
+    background: none;
   }
 }
