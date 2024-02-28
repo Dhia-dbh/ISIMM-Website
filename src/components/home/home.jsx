@@ -5,6 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Slider from "react-slick";
 import NavBar from "../commun/navbar/NavBar";
 import isimm1 from "../../assets/isimm1.jpg";
+import isimmcous from "../../assets/cours.jpeg";
 import pfp from "../../assets/isimm3.jpg";
 import clubsbg from "../../assets/clubs.png";
 import Footer_1 from "../Footer_1/Footer_1";
