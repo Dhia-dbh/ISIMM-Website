@@ -38,6 +38,11 @@ function App() {
       element: <Home />,
     },
     {
+      path: "/formation",
+      element: <Formations/>,
+    }
+    ,
+    {
       path: "/Login",
       element: <Login />,
     },

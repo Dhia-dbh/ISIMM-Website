@@ -159,7 +159,7 @@ const Home = () => {
                   </ul>
                 </div>
               </div>
-              <a id="allnews" href="http://www.isimm.rnu.tn/public/formation">
+              <a id="allnews" href="/formation">
                 Voir Plus <FaArrowAltCircleRight />
               </a>
             </section>
