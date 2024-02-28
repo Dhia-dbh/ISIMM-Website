@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./home.css";
 
+import Carousel from "react-bootstrap/Carousel";
+import Slider from "react-slick";
 import NavBar from "../commun/navbar/NavBar";
 import isimm1 from "../../assets/isimm1.jpg";
 import pfp from "../../assets/isimm3.jpg";
@@ -91,6 +93,26 @@ const Home = () => {
   return (
     <>
       <NavBar items={navBarItems["navBarItems"]} />
+      <Carousel id="Carousel" style={{ zIndex: 1 }}>
+        <Carousel.Item>
+          <img height={700} src={isimm1}></img>
+          <Carousel.Caption>
+            <h3>Entrée de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img height={700} src={pfp}></img>
+          <Carousel.Caption>
+            <h3>Amphi de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img height={700} src={isimmcous}></img>
+          <Carousel.Caption>
+            <h3>Cour de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <img src={isimm1} alt="Beautiful ISIMM" />
       <section style={{ minHeight: "100px" }}>
         <div className="aboutUs">
