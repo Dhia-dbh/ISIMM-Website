@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./home.css";
 
-import Carousel from 'react-bootstrap/Carousel';
+import Carousel from "react-bootstrap/Carousel";
 import NavBar from "../commun/navbar/NavBar";
 import isimm1 from "../../assets/isimm1.jpg";
-import isimmcous from "../../assets/cours.jpeg" 
+import isimmcous from "../../assets/cours.jpeg";
 import pfp from "../../assets/amphi.jpg";
 import clubsbg from "../../assets/clubs.png";
 import Footer_1 from "../Footer_1/Footer_1";
@@ -92,8 +92,29 @@ const News = () => {
 const Home = () => {
   return (
     <>
-      <NavBar items={navBarItems["navBarItems"]} />
-      <img src={isimm1} alt="Beautiful ISIMM" />
+      <div style={{ position: "fixed", width: "100%", zIndex: "2" }}>
+        <NavBar items={navBarItems["navBarItems"]} />
+      </div>
+      <Carousel id="Carousel" style={{ zIndex: 1 }}>
+        <Carousel.Item>
+          <img height={1200} src={isimm1}></img>
+          <Carousel.Caption>
+            <h3>Entrée de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img height={1200} src={pfp}></img>
+          <Carousel.Caption>
+            <h3>Amphi de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img height={1200} src={isimmcous}></img>
+          <Carousel.Caption>
+            <h3>Cour de ISIMM</h3>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
       <section style={{ minHeight: "100px" }}>
         <div className="aboutUs">
           {" "}

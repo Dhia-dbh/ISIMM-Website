@@ -97,7 +97,10 @@ function App() {
       path: "/*",
       element: <NotFound />,
     },
-    { path: "/actualites", element: <Actual /> },
+    {
+      path: "/actualites",
+      element: <Actual />,
+    },
   ]);
   const styles = {
     //color: "green",
