@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import "./navBar.css";
 import logo from "/src/assets/logo2.png";
 
-const NavBar = ({ items }) => {
+const NavBar = ({ items, isScrolledHeight }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
@@ -21,7 +21,7 @@ const NavBar = ({ items }) => {
       setScrollPosition(currentScrollPosition);
 
       // Adjust logo size based on the scroll position
-      if (currentScrollPosition > 300) {
+      if (currentScrollPosition > isScrolledHeight) {
         setScrolled(true);
         setLogoSize("80px");
       } else {
@@ -47,7 +47,7 @@ const NavBar = ({ items }) => {
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
-          <div className="logo">
+          <div className={"logo " + (isScrolled ? "smallImage" : "bigImage")}>
             <img
               src={logo}
               alt="ISIMM"
@@ -55,7 +55,6 @@ const NavBar = ({ items }) => {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              height={logoSize}
             />
           </div>
           <div className="">

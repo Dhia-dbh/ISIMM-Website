@@ -88,12 +88,15 @@ const News = () => {
     </div>
   );
 };
-
+const carousel_height = 1200;
 const Home = () => {
   return (
     <>
       <div style={{ position: "fixed", width: "100%", zIndex: "2" }}>
-        <NavBar items={navBarItems["navBarItems"]} />
+        <NavBar
+          items={navBarItems["navBarItems"]}
+          isScrolledHeight={carousel_height}
+        />
       </div>
       <Carousel id="Carousel" style={{ zIndex: 1 }}>
         <Carousel.Item>
@@ -149,13 +152,29 @@ const Home = () => {
                   <h4>Département</h4>
                   <ul>
                     <li>
-                      <a href="/administration/departements" className="FormationLink"> Informatique</a>
+                      <a
+                        href="/administration/departements"
+                        className="FormationLink"
+                      >
+                        {" "}
+                        Informatique
+                      </a>
                     </li>
                     <li>
-                      <a href="/administration/departements" className="FormationLink">Mathématique</a>
+                      <a
+                        href="/administration/departements"
+                        className="FormationLink"
+                      >
+                        Mathématique
+                      </a>
                     </li>
                     <li>
-                      <a href="/administration/departements" className="FormationLink">Technologie</a>
+                      <a
+                        href="/administration/departements"
+                        className="FormationLink"
+                      >
+                        Technologie
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -163,19 +182,30 @@ const Home = () => {
                   <h4>Cycles</h4>
                   <ul>
                     <li>
-                      <a href="/formation" className="FormationLink">Cycle Préparatoire</a>
+                      <a href="/formation" className="FormationLink">
+                        Cycle Préparatoire
+                      </a>
                     </li>
                     <li>
-                      <a href="/formation" className="FormationLink"> Licence</a>
+                      <a href="/formation" className="FormationLink">
+                        {" "}
+                        Licence
+                      </a>
                     </li>
                     <li>
-                      <a href="/formation" className="FormationLink">Mastére Professionelle</a>
+                      <a href="/formation" className="FormationLink">
+                        Mastére Professionelle
+                      </a>
                     </li>
                     <li>
-                      <a href="/formation" className="FormationLink">Mastére de Recherche</a>
+                      <a href="/formation" className="FormationLink">
+                        Mastére de Recherche
+                      </a>
                     </li>
                     <li>
-                      <a href="/formation" className="FormationLink">Ingénieurs</a>
+                      <a href="/formation" className="FormationLink">
+                        Ingénieurs
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -218,12 +248,16 @@ const Home = () => {
             </div>
           </section>
 
-          <section  className="clubsLogoSection">
-          <a style={{ textDecoration: 'none', color: 'inherit' }} href="/etudiants/clubs">
-            <div className="clubsImg">
-              <h1 >clubs</h1>
-              <img id="clubph" src={clubsbg} alt="Clubs Icon" />
-            </div></a>
+          <section className="clubsLogoSection">
+            <a
+              style={{ textDecoration: "none", color: "inherit" }}
+              href="/etudiants/clubs"
+            >
+              <div className="clubsImg">
+                <h1>clubs</h1>
+                <img id="clubph" src={clubsbg} alt="Clubs Icon" />
+              </div>
+            </a>
           </section>
         </div>
       </section>

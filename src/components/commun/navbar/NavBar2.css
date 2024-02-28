@@ -21,13 +21,7 @@ header {
   letter-spacing: 2px;
   overflow: hidden;
   transition: transform 600ms ease-in-out;
-}
-
-.smallImage {
   height: 80px;
-}
-.bigImage {
-  height: 200px;
 }
 
 nav {
