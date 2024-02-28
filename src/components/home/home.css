@@ -6,6 +6,9 @@
 img {
   width: 100%;
 }
+.aboutUs_content ul {
+  list-style-type: none;
+}
 .actualiteHolder {
   display: flex;
   flex-direction: row;
@@ -45,7 +48,7 @@ img {
   height: fit-content;
   width: fit-content;
 }
-.department{
+.department {
   margin-right: 15%;
   font-size: 20px;
 }
@@ -54,13 +57,13 @@ img {
   width: 410px;
   font-size: 20px;
 }
-.FormationLink{
+.FormationLink {
   text-decoration: none; /* Remove default underline */
   position: relative;
   color: #333; /* Set your preferred text color */
   cursor: pointer;
 }
-.FormationLink::before{
+.FormationLink::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -106,9 +109,8 @@ img {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-
 }
-.ISIMMDescription{
+.ISIMMDescription {
   width: 100%;
 }
 .clubsLogoSection {
@@ -119,14 +121,12 @@ img {
   right: 15%;
 }
 
-
-
 .clubsImg {
   border: 15px solid #000;
   height: 100%;
   transition: transform 0.5s ease-in-out;
 }
-#navi{
+#navi {
   z-index: 999;
 }
 
@@ -135,21 +135,18 @@ img {
   rotate: 5;
   height: 100%;
   transform: rotate(20deg);
-  
+
   transform: rotate(20deg);
 }
 
-
-.aboutUs{
+.aboutUs {
   display: flex;
 }
-.aboutUs_content{
+.aboutUs_content {
   display: flex;
-  
 }
-.content{
+.content {
   margin-left: 6%;
-  
 }
 
 .isimmDescriptionSection {
@@ -160,7 +157,7 @@ img {
   align-items: center;
   text-align: left;
 }
-.ISIMMHolder{
+.ISIMMHolder {
   height: 450px;
   width: 45%;
   background: linear-gradient(
@@ -179,7 +176,7 @@ img {
   margin-top: 2%;
   border-radius: 24px;
 }
-.ACCHolder{
+.ACCHolder {
   height: 450px;
   width: 45%;
   background: linear-gradient(
@@ -198,8 +195,7 @@ img {
   margin-top: 2%;
   border-radius: 24px;
 }
-#clubph{
-
+#clubph {
   max-width: 300px;
   max-height: 350px;
   margin: 15px 5px;
@@ -209,50 +205,45 @@ img {
   transform: translate(-50%, -10%);
 }
 
-.location{
-  background-color:rgb(196, 196, 196) ;
+.location {
+  background-color: rgb(196, 196, 196);
   width: 100%;
   border-radius: 24px;
   margin-left: 3%;
-  margin-right:2% ;
+  margin-right: 2%;
   padding: 1%;
 }
-.Show{
-  background-color:rgb(196, 196, 196) ;
+.Show {
+  background-color: rgb(196, 196, 196);
   width: 100%;
   border-radius: 24px;
   margin-left: 2%;
-  margin-right:3% ;
+  margin-right: 3%;
   padding: 1%;
 }
 
-.lastinfo{
+.lastinfo {
   display: flex;
 }
 
-#carousel_slide{
+#carousel_slide {
   margin-top: 8%;
 }
 /*this css code is for the actualité*/
-.news1{
-     
+.news1 {
   margin-top: 2%;
   margin-bottom: 30px;
-  background-color:rgb(196, 196, 196);
+  background-color: rgb(196, 196, 196);
   border-radius: 10px;
   margin-left: 3%;
-  margin-right:3%;
+  margin-right: 3%;
   align-items: center;
   padding: 1%;
-  
-
 }
-#title{
-padding-top: 4%;
+#title {
+  padding-top: 4%;
 }
 .flip-card {
-  
-  
   width: 50lvb;
   height: 52lvb;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
@@ -261,25 +252,22 @@ padding-top: 4%;
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  
-  
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
-  
   transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -290,7 +278,6 @@ padding-top: 4%;
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-
   color: black;
   width: 50lvb;
   height: 52lvb;
@@ -298,49 +285,69 @@ padding-top: 4%;
 
 /* Style the back side */
 .flip-card-back {
-
   align-items: center;
   width: 50lvb;
   height: 52lvb;
   justify-content: center;
   transform: rotateY(180deg);
 }
-.element{
+.element {
   height: 300px;
   margin-bottom: 70px;
   margin-bottom: 50%;
 
   text-align: center;
-  
-  
 }
-#ph{
-margin :3%;
-padding-right: 5%;
-
+#ph {
+  margin: 3%;
+  padding-right: 5%;
 }
-.BG{
-
-  background-image: url('../../assets/isimm4.jpg');
-  background-size: cover; 
+.BG {
+  background-image: url("../../assets/isimm4.jpg");
+  background-size: cover;
   background-repeat: no-repeat;
   width: 100;
   height: 100%;
   padding-top: 1%;
-  
 }
 
 .cards {
-display: grid;
+  display: grid;
 
-grid-template-columns: repeat(3, 1fr);
-gap: 20px; /* Adjust the gap between grid items as needed */
-align-items: center;
-padding-left: 5%;
-padding-top: 5%;
-padding-bottom: 5%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* Adjust the gap between grid items as needed */
+  align-items: center;
+  padding-left: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
-#allnews{
+#allnews {
   color: black;
 }
-/*end of css code for the actualité*/
+@media (max-width: 1200px) {
+  .carousel-item {
+    height: 33vh;
+  }
+  .isimmDescriptionSection {
+    justify-content: normal;
+  }
+  .ACCHolder {
+    padding: 10px 5px 5px 5px;
+  }
+  .aboutUs_content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .aboutUs_content ul {
+    width: fit-content;
+  }
+  .aboutUs_content div {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .clubsHolder {
+    padding: 0;
+    padding-left: 5px;
+  }
+}
