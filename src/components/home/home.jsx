@@ -128,13 +128,13 @@ const Home = () => {
                   <h4>Département</h4>
                   <ul>
                     <li>
-                      <a className="FormationLink"> Informatique</a>
+                      <a href="/administration/departements" className="FormationLink"> Informatique</a>
                     </li>
                     <li>
-                      <a className="FormationLink">Mathématique</a>
+                      <a href="/administration/departements" className="FormationLink">Mathématique</a>
                     </li>
                     <li>
-                      <a className="FormationLink">Technologie</a>
+                      <a href="/administration/departements" className="FormationLink">Technologie</a>
                     </li>
                   </ul>
                 </div>
@@ -142,19 +142,19 @@ const Home = () => {
                   <h4>Cycles</h4>
                   <ul>
                     <li>
-                      <a className="FormationLink">Cycle Préparatoire</a>
+                      <a href="/formation" className="FormationLink">Cycle Préparatoire</a>
                     </li>
                     <li>
-                      <a className="FormationLink"> Licence</a>
+                      <a href="/formation" className="FormationLink"> Licence</a>
                     </li>
                     <li>
-                      <a className="FormationLink">Mastére Professionelle</a>
+                      <a href="/formation" className="FormationLink">Mastére Professionelle</a>
                     </li>
                     <li>
-                      <a className="FormationLink">Mastére de Recherche</a>
+                      <a href="/formation" className="FormationLink">Mastére de Recherche</a>
                     </li>
                     <li>
-                      <a className="FormationLink">Ingénieurs</a>
+                      <a href="/formation" className="FormationLink">Ingénieurs</a>
                     </li>
                   </ul>
                 </div>
@@ -197,7 +197,7 @@ const Home = () => {
             </div>
           </section>
 
-          <section className="clubsLogoSection">
+          <section href="/etudiants/clubs" className="clubsLogoSection">
             <div className="clubsImg">
               <h1>clubs</h1>
               <img id="clubph" src={clubsbg} alt="Clubs Icon" />
