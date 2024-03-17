@@ -3,7 +3,7 @@ import NavBarItemMenu from "./navBarItemMenu";
 import { VscThreeBars } from "react-icons/vsc";
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
 
-import "./navBar.css";
+import "./NavBar.css";
 import logo from "/src/assets/logo2.png";
 
 const NavBar = ({ items, isScrolledHeight }) => {
