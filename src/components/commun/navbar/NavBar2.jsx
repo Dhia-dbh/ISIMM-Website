@@ -5,7 +5,7 @@ import NavBarItemMenu2 from "./navBarItemMenu2";
 import { useState, useEffect } from "react";
 import items from "../../../Data/navBarItems.json";
 
-import "./navBar2.css";
+import "./NavBar2.css";
 import logo from "/src/assets/logo2.png";
 
 const NavBar2 = () => {
@@ -13,7 +13,6 @@ const NavBar2 = () => {
   const handleMouseEnter = () => {
     alert("Mouse Enter");
   };
-  console.log("items", items);
   return (
     <div className="wrapper">
       <header>
