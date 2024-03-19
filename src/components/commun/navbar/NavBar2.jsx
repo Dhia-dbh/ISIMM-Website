@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import items from "../../../Data/navBarItems.json";
 
 import "./navBar2.css";
-import logo from "/src/assets/logo2.png";
+import logo from "/src/assets/logoNoBg.png";
 
 const NavBar2 = () => {
   const logoSize = "80px";

@@ -41,7 +41,7 @@ const actualiteItems = [
 
 const News = () => {
   return (
-    <div class="cards">
+    <div className="cards">
       {actualiteItems.map((e, index) => {
         let image;
 
@@ -69,14 +69,14 @@ const News = () => {
 
         return (
           <div onClick={openLink} key={index}>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
                   <img id="ph" src={image} alt="Avatar" />
                   <p>{e.title}</p>
                   <p>{e.Date}</p>
                 </div>
-                <div class="flip-card-back">
+                <div className="flip-card-back">
                   <h5>Discription :</h5>
                   <p>{e.Describtion}</p>
                 </div>
