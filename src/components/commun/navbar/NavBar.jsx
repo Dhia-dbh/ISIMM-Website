@@ -4,7 +4,7 @@ import { VscThreeBars } from "react-icons/vsc";
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
 
 import "./NavBar.css";
-import logo from "/src/assets/logo2.png";
+import logo from "/src/assets/logoNoBg.png";
 
 const NavBar = ({ items, isScrolledHeight }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
