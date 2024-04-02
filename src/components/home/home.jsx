@@ -95,7 +95,7 @@ const Home = () => {
       <div style={{ position: "fixed", width: "100%", zIndex: "2" }}>
         <NavBar items={navBarItems["navBarItems"]} />
       </div>
-      <Carousel id="Carousel" style={{ zIndex: 1 }}>
+      <Carousel id="Carousel" className="carousel-container" style={{ zIndex: 1 }}>
         <Carousel.Item>
           <img height={1200} src={isimm1}></img>
           <Carousel.Caption>
@@ -116,6 +116,7 @@ const Home = () => {
         </Carousel.Item>
       </Carousel>
       <section style={{ minHeight: "100px" }}>
+      <section id="presentation">
         <div className="aboutUs">
           {" "}
           <div className="ACCHolder">
@@ -133,10 +134,7 @@ const Home = () => {
                   les étudiants et les diplômés de l’ISIMM. Ceci est une très
                   bonne occasion pour ouvrir des perspectives devant nos
                   étudiants pour faire preuve d’initiatives dans le domaine qui
-                  leur est cher ! A travers cette plateforme, les enseignants et
-                  les étudiants ainsi que le staff administratif peuvent accéder
-                  à leurs comptes personnels à distance afin de faciliter la
-                  communication entre eux.{" "}
+                  leur est cher !{" "}
                 </p>
               </div>
             </section>
@@ -186,7 +184,7 @@ const Home = () => {
             </section>
           </div>
         </div>
-
+        </section>
         <div className="news1">
           <h2 className="title mt-5 mb-5">Actualité</h2>
           {News()}
