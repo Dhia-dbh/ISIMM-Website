@@ -42,7 +42,6 @@ const actualiteItems = [
 const News = () => {
   return (
     <div className="cards">
-    <div className="cards">
       {actualiteItems.map((e, index) => {
         let image;
 

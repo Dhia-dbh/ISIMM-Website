@@ -1,9 +1,6 @@
 import { useState, useEffect } from "react";
 import NavBarItemMenu from "./navBarItemMenu";
 import { VscThreeBars } from "react-icons/vsc";
-import { useState, useEffect } from "react";
-import NavBarItemMenu from "./navBarItemMenu";
-import { VscThreeBars } from "react-icons/vsc";
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
 
 import "./navBar.css";
@@ -24,7 +21,6 @@ const NavBar = ({ items, isScrolledHeight }) => {
       setScrollPosition(currentScrollPosition);
 
       // Adjust logo size based on the scroll position
-      if (currentScrollPosition > isScrolledHeight) {
       if (currentScrollPosition > isScrolledHeight) {
         setScrolled(true);
         setLogoSize("80px");
@@ -48,12 +44,10 @@ const NavBar = ({ items, isScrolledHeight }) => {
     <div className="wrapper">
       <header>
         <input type="checkbox" name="showNavBar" id="showNavBar" />
-        <input type="checkbox" name="showNavBar" id="showNavBar" />
         <nav className={isScrolled ? "isScrolledNavBar" : "notScrolledNavBar"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
-          <div className={"logo " + (isScrolled ? "smallImage" : "bigImage")}>
           <div className={"logo " + (isScrolled ? "smallImage" : "bigImage")}>
             <img
               src={logo}
@@ -64,11 +58,6 @@ const NavBar = ({ items, isScrolledHeight }) => {
               }}
             />
           </div>
-          <label className="showNavBarButton" htmlFor="showNavBar">
-            <VscThreeBars />
-          </label>
-          <div className="smallSizeNavBarButtonContainer"></div>
-          <div className="navBarItems">
           <label className="showNavBarButton" htmlFor="showNavBar">
             <VscThreeBars />
           </label>

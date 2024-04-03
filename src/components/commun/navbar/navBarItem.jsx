@@ -3,7 +3,6 @@ export default function NavBarItem({ _key, isScrolled, item }) {
   return (
     <a
       key={_key}
-      key={_key}
       className={isScrolled ? "isScrolledText" : "notScrolledText"}
       href={item.path}
       onClick={(e) => {

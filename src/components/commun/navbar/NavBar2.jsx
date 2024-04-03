@@ -1,9 +1,7 @@
+import { useState, useEffect } from "react";
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
 import NavBarItemMenu from "./navBarItemMenu";
-import NavBarItemMenu from "./navBarItemMenu";
-import NavBarItemMenu2 from "./navBarItemMenu2";
 
-import { useState, useEffect } from "react";
 import items from "../../../Data/navBarItems.json";
 
 import "./navBar2.css";
