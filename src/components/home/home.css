@@ -54,8 +54,9 @@ img {
 }
 .cycles {
   margin-left: 15%;
-  width: 410px;
+  width: 400px;
   font-size: 20px;
+  justify-content: center;
 }
 .FormationLink {
   text-decoration: none; /* Remove default underline */
@@ -98,6 +99,13 @@ img {
   margin-bottom: 1%;
   border-radius: 24px;
 }
+.clubsDescription{
+  justify-content: space-around;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
 .clubsDescriptionSection,
 .clubsLogoSection {
   margin: 50px 10px;
@@ -119,12 +127,14 @@ img {
   justify-content: end;
   position: relative;
   right: 15%;
+  
 }
 
 .clubsImg {
   border: 15px solid #000;
   height: 100%;
   transition: transform 0.5s ease-in-out;
+  padding-bottom: -1%;
 }
 #navi {
   z-index: 999;
@@ -178,7 +188,7 @@ img {
 }
 .ACCHolder {
   height: 450px;
-  width: 45%;
+  width: 100%;
   background: linear-gradient(
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.7)
@@ -186,7 +196,7 @@ img {
     url("../../assets/bge.jpg");
   background-repeat: round;
   background-size: cover;
-  padding: 10px 150px;
+  padding: 10px ;
   display: flex;
   flex-direction: row;
   margin-left: 3%;
@@ -226,11 +236,25 @@ img {
   display: flex;
 }
 
-#carousel_slide {
-  margin-top: 8%;
+@media only screen and (max-width: 768px) {
+  .aboutUs {
+    display: block;
+  }
+  .cards{
+    display:block;
+  }
+
+}
+
+.carousel-container {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /*this css code is for the actualité*/
-.news1 {
+.news1{
   margin-top: 2%;
   margin-bottom: 30px;
   background-color: rgb(196, 196, 196);
@@ -239,6 +263,9 @@ img {
   margin-right: 3%;
   align-items: center;
   padding: 1%;
+  display: fit-content;
+  
+
 }
 #title {
   padding-top: 4%;
@@ -310,7 +337,9 @@ img {
   height: 100%;
   padding-top: 1%;
 }
-
+.Carousel.Item img{
+  height: 55px;
+}
 .cards {
   display: grid;
 
@@ -326,13 +355,20 @@ img {
 }
 @media (max-width: 1200px) {
   .carousel-item {
-    height: 33vh;
+    height: 60vh;
+    
   }
+
   .isimmDescriptionSection {
     justify-content: normal;
+    
   }
   .ACCHolder {
+    height: 300px;
     padding: 10px 5px 5px 5px;
+    padding-top: 6%;
+    width: 94%;
+
   }
   .aboutUs_content {
     flex-direction: column;
@@ -349,5 +385,35 @@ img {
   .clubsHolder {
     padding: 0;
     padding-left: 5px;
+  }
+  .ISIMMHolder {
+    height: 450px;
+    width: 94%;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.7)
+      ),
+      url("../../assets/formation.jpg");
+    background-repeat: round;
+    background-size: cover;
+    padding: 10px 150px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-bottom: 1%;
+    margin-top: 2%;
+    border-radius: 24px;
+  }
+  .cycles {
+    font-size: 20px;
+    width: 250px; 
+    text-align: center;
+    margin-right: 40%;
+    margin-left: auto;
+  }
+  .clubsHolder{
+    display: block;
+    height: 800px;
   }
 }

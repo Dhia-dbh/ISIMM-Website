@@ -1,5 +1,6 @@
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
 import NavBarItemMenu from "./navBarItemMenu";
+import NavBarItemMenu from "./navBarItemMenu";
 import NavBarItemMenu2 from "./navBarItemMenu2";
 
 import { useState, useEffect } from "react";
@@ -13,7 +14,6 @@ const NavBar2 = () => {
   const handleMouseEnter = () => {
     alert("Mouse Enter");
   };
-  console.log("items", items);
   return (
     <div className="wrapper">
       <header>
