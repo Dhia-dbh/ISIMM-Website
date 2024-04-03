@@ -41,7 +41,7 @@ const actualiteItems = [
 
 const News = () => {
   return (
-    <div class="cards">
+    <div className="cards">
       {actualiteItems.map((e, index) => {
         let image;
 
@@ -69,14 +69,14 @@ const News = () => {
 
         return (
           <div onClick={openLink} key={index}>
-            <div class="flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <div className="flip-card">
+              <div className="flip-card-inner">
+                <div className="flip-card-front">
                   <img id="ph" src={image} alt="Avatar" />
                   <p>{e.title}</p>
                   <p>{e.Date}</p>
                 </div>
-                <div class="flip-card-back">
+                <div className="flip-card-back">
                   <h5>Discription :</h5>
                   <p>{e.Describtion}</p>
                 </div>
@@ -88,102 +88,130 @@ const News = () => {
     </div>
   );
 };
-
+const carousel_height = 1200;
 const Home = () => {
   return (
     <>
-      <div style={{ position: "fixed", width: "100%", zIndex: "2" }}>
-        <NavBar items={navBarItems["navBarItems"]} />
-      </div>
-      <Carousel id="Carousel" className="carousel-container" style={{ zIndex: 1 }}>
+      <NavBar
+        items={navBarItems["navBarItems"]}
+        isScrolledHeight={carousel_height}
+      />
+      <Carousel id="Carousel" style={{ zIndex: 1 }}>
         <Carousel.Item>
-          <img height={1200} src={isimm1}></img>
+          <img src={isimm1}></img>
           <Carousel.Caption>
             <h3>Entrée de ISIMM</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img height={1200} src={pfp}></img>
+          <img src={pfp}></img>
           <Carousel.Caption>
             <h3>Amphi de ISIMM</h3>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
-          <img height={1200} src={isimmcous}></img>
+          <img src={isimmcous}></img>
           <Carousel.Caption>
             <h3>Cour de ISIMM</h3>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
       <section style={{ minHeight: "100px" }}>
-      <section id="presentation">
-        <div className="aboutUs">
-          {" "}
-          <div className="ACCHolder">
-            <section className="isimmDescriptionSection">
-              <h2 className="title">Accueil</h2>
-              <div className="ISIMMDescription">
-                <p>
-                  {" "}
-                  Bienvenue sur le site officiel de l’Institut Supérieur
-                  d’Informatique et de Mathématiques de Monastir (ISIMM). Cette
-                  plateforme vous permet de découvrir les différentes formations
-                  assurées par l’ISIMM, la vie-estudiantine, l’entreprenariat
-                  avec le milieu socio-économique, le tissu industriel peut
-                  intervenir par la proposition des stages et des emplois pour
-                  les étudiants et les diplômés de l’ISIMM. Ceci est une très
-                  bonne occasion pour ouvrir des perspectives devant nos
-                  étudiants pour faire preuve d’initiatives dans le domaine qui
-                  leur est cher !{" "}
-                </p>
-              </div>
-            </section>
-          </div>
-          <div className="ISIMMHolder">
-            <section className="isimmDescriptionSection">
-              <h2 className="title">Nos Formations</h2>
-              <div className="aboutUs_content">
-                <div className="department">
-                  <h4>Département</h4>
-                  <ul>
-                    <li>
-                      <a href="/administration/departements" className="FormationLink"> Informatique</a>
-                    </li>
-                    <li>
-                      <a href="/administration/departements" className="FormationLink">Mathématique</a>
-                    </li>
-                    <li>
-                      <a href="/administration/departements" className="FormationLink">Technologie</a>
-                    </li>
-                  </ul>
+        <section id="presentation">
+          <div className="aboutUs">
+            {" "}
+            <div className="ACCHolder">
+              <section className="isimmDescriptionSection">
+                <h2 className="title">Accueil</h2>
+                <div className="ISIMMDescription">
+                  <p>
+                    {" "}
+                    Bienvenue sur le site officiel de l’Institut Supérieur
+                    d’Informatique et de Mathématiques de Monastir (ISIMM).
+                    Cette plateforme vous permet de découvrir les différentes
+                    formations assurées par l’ISIMM, la vie-estudiantine,
+                    l’entreprenariat avec le milieu socio-économique, le tissu
+                    industriel peut intervenir par la proposition des stages et
+                    des emplois pour les étudiants et les diplômés de l’ISIMM.
+                    Ceci est une très bonne occasion pour ouvrir des
+                    perspectives devant nos étudiants pour faire preuve
+                    d’initiatives dans le domaine qui leur est cher !{" "}
+                  </p>
                 </div>
-                <div className="cycles">
-                  <h4>Cycles</h4>
-                  <ul>
-                    <li>
-                      <a href="/formation" className="FormationLink">Cycle Préparatoire</a>
-                    </li>
-                    <li>
-                      <a href="/formation" className="FormationLink"> Licence</a>
-                    </li>
-                    <li>
-                      <a href="/formation" className="FormationLink">Mastére Professionelle</a>
-                    </li>
-                    <li>
-                      <a href="/formation" className="FormationLink">Mastére de Recherche</a>
-                    </li>
-                    <li>
-                      <a href="/formation" className="FormationLink">Ingénieurs</a>
-                    </li>
-                  </ul>
+              </section>
+            </div>
+            <div className="ISIMMHolder">
+              <section className="isimmDescriptionSection">
+                <h2 className="title">Nos Formations</h2>
+                <div className="aboutUs_content">
+                  <div className="department">
+                    <h4>Département</h4>
+                    <ul>
+                      <li>
+                        <a
+                          href="/administration/departements"
+                          className="FormationLink"
+                        >
+                          {" "}
+                          Informatique
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/administration/departements"
+                          className="FormationLink"
+                        >
+                          Mathématique
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="/administration/departements"
+                          className="FormationLink"
+                        >
+                          Technologie
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="cycles">
+                    <h4>Cycles</h4>
+                    <ul>
+                      <li>
+                        <a href="/formation" className="FormationLink">
+                          Cycle Préparatoire
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/formation" className="FormationLink">
+                          {" "}
+                          Licence
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/formation" className="FormationLink">
+                          Mastére Professionelle
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/formation" className="FormationLink">
+                          Mastére de Recherche
+                        </a>
+                      </li>
+                      <li>
+                        <a href="/formation" className="FormationLink">
+                          Ingénieurs
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-              </div>
-              <a id="allnews" href="/formation">
-                Voir Plus <FaArrowAltCircleRight />
-              </a>
-            </section>
+                <a id="allnews" href="/formation">
+                  Voir Plus <FaArrowAltCircleRight />
+                </a>
+              </section>
+            </div>
           </div>
-        </div>
         </section>
         <div className="news1">
           <h2 className="title mt-5 mb-5">Actualité</h2>
@@ -216,12 +244,16 @@ const Home = () => {
             </div>
           </section>
 
-          <section  className="clubsLogoSection">
-          <a style={{ textDecoration: 'none', color: 'inherit' }} href="/etudiants/clubs">
-            <div className="clubsImg">
-              <h1 >clubs</h1>
-              <img id="clubph" src={clubsbg} alt="Clubs Icon" />
-            </div></a>
+          <section className="clubsLogoSection">
+            <a
+              style={{ textDecoration: "none", color: "inherit" }}
+              href="/etudiants/clubs"
+            >
+              <div className="clubsImg">
+                <h1>clubs</h1>
+                <img id="clubph" src={clubsbg} alt="Clubs Icon" />
+              </div>
+            </a>
           </section>
         </div>
       </section>

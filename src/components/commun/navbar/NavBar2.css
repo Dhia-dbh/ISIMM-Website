@@ -1,128 +1,14 @@
-header {
-  width: 100%;
-  background: url(https://wallpaper.wiki/wp-content/uploads/2017/05/wallpaper.wiki-Beautiful-Full-HD-Wallpaper-Download-Free-PIC-WPE0010098.jpg)
-    no-repeat 50% 50%;
-  background-size: cover;
-}
-.wrapper {
-  z-index: 1;
-  position: fixed;
-}
-
-.logo {
-  line-height: 60px;
-  position: fixed;
-  float: left;
-  margin: 16px 80px;
-  left: 7%;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
-  overflow: hidden;
-  transition: transform 600ms ease-in-out;
-}
-
-.smallImage {
-  height: 80px;
-}
-.bigImage {
-  height: 200px;
-}
-
-nav {
-  position: fixed;
+.isScrolledNavBar2 {
+  backdrop-filter: blur(10px);
   top: 0;
+}
+.logo2 {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  width: 120px;
+}
+.logo2 img {
+  height: 100%;
   width: 100%;
-  line-height: 60px;
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.isScrolledNavBar2 > ul {
-  line-height: 60px;
-  list-style: none;
-  background-color: rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  color: #fff;
-  padding: 0;
-  text-align: right;
-  margin: 0;
-  padding-right: 40px;
-  transition: 0.5s ease;
-}
-.isScrolledNavBar2 ul li:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-.isScrolledNavBar2 ul li:hover a {
-  color: rgba(0, 0, 0, 1);
-}
-.isScrolledNavBar2 ul li:hover section ul {
-  color: rgba(0, 0, 0, 1);
-  background-color: rgba(255, 255, 255, 0.9);
-}
-.isScrolledNavBar2 ul li section {
-  z-index: 1112;
-}
-.isScrolledNavBar2 ul li section ul {
-  text-align: left;
-}
-.isScrolledNavBar2.black ul {
-  background: #000;
-}
-
-.isScrolledNavBar2 ul li {
-  display: inline-block;
-  padding: 14px 40px;
-  transition: 0.15s ease;
-}
-
-.isScrolledNavBar2 ul li a {
-  text-decoration: none;
-  color: #fcfcfc;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.menu-icon {
-  line-height: 60px;
-  width: 100%;
-  background: #000;
-  text-align: right;
-  box-sizing: border-box;
-  padding: 15px 24px;
-  cursor: pointer;
-  color: #fff;
-  display: none;
-}
-
-@media (max-width: 786px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    margin-top: 16px;
-  }
-
-  .isScrolledNavBar2 ul {
-    max-height: 0px;
-    background: #000;
-  }
-
-  .isScrolledNavBar2.black ul {
-    background: #000;
-  }
-
-  .showing {
-    max-height: 34em;
-  }
-
-  .isScrolledNavBar2 ul li {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 24px;
-    text-align: center;
-  }
-
-  .menu-icon {
-    display: block;
-  }
 }

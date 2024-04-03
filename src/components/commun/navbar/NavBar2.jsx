@@ -1,18 +1,18 @@
 import { NavBarItemMenuless } from "./NavBarItemMenuless";
+import NavBarItemMenu from "./navBarItemMenu";
 import NavBarItemMenu2 from "./navBarItemMenu2";
 
 import { useState, useEffect } from "react";
 import items from "../../../Data/navBarItems.json";
 
-import "./navBar2.css";
-import logo from "/src/assets/logo2.png";
+import "./NavBar2.css";
+import logo from "/src/assets/logoNoBg.png";
 
 const NavBar2 = () => {
   const logoSize = "80px";
   const handleMouseEnter = () => {
     alert("Mouse Enter");
   };
-  console.log("items", items);
   return (
     <div className="wrapper">
       <header>
@@ -20,7 +20,7 @@ const NavBar2 = () => {
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
-          <div className="logo">
+          <div className="logo2">
             <a href="/home">
               <img
                 src={logo}
@@ -34,7 +34,7 @@ const NavBar2 = () => {
             <ul>
               {items["navBarItems"].map((item, _key) => {
                 return item.submenu ? (
-                  <NavBarItemMenu2
+                  <NavBarItemMenu
                     onHover={handleMouseEnter}
                     _key={_key}
                     isScrolled={true}

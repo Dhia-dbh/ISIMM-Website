@@ -16,7 +16,10 @@ header {
     no-repeat 50% 50%;
   background-size: cover;
 }
-
+.wrapper {
+  z-index: 2;
+  position: fixed;
+}
 .logo {
   line-height: 60px;
   position: fixed;
@@ -28,16 +31,37 @@ header {
   font-size: 20px;
   letter-spacing: 2px;
   overflow: hidden;
-  transition: transform 600ms ease-in-out;
 }
 
 .smallImage {
-  height: 80px;
+  animation: makeSmaller 0.5s ease forwards;
 }
 .bigImage {
-  height: 200px;
+  animation: makeBigger 0.5s ease forwards;
 }
-
+@keyframes makeBigger {
+  0% {
+    height: 80px;
+  }
+  100% {
+    height: 200px;
+  }
+}
+@keyframes makeSmaller {
+  0% {
+    height: 200px;
+  }
+  100% {
+    height: 80px;
+  }
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+.smallSizeNavBarButtonContainer {
+  height: 0;
+}
 nav {
   position: fixed;
   width: 100%;
@@ -55,6 +79,10 @@ nav ul {
   margin: 0;
   padding-right: 40px;
   transition: 0.5s;
+  z-index: 2;
+}
+nav .showNavBarButton {
+  display: none;
 }
 
 nav.black ul {
@@ -112,35 +140,90 @@ nav ul li a {
   color: #fff;
   transition: background-color 200ms linear;
 }
+.showNavBarButton label {
+  font-size: 36px;
+  margin: 0;
+  display: none;
+}
+#showNavBar {
+  display: none;
+}
 
-@media (max-width: 786px) {
-  .logo {
-    position: fixed;
-    top: 0;
-    margin-top: 16px;
+@media (max-width: 1200px) {
+  nav label {
+    position: absolute;
+    float: right;
+    top: -9px;
+    right: 15px;
+    color: black;
+    font-size: 36px;
   }
-
-  nav ul {
-    max-height: 0px;
-    background: #000;
+  nav .navBarItems ul {
+    display: none;
   }
-
-  nav.black ul {
-    background: #000;
+  nav .navBarItems ul li {
+    display: block;
   }
-
-  .showing {
-    max-height: 34em;
+  nav .showNavBarButton {
+    display: block;
   }
-
-  nav ul li {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 24px;
+  .showNavBarButton label {
+    display: block;
+  }
+  #showNavBar:checked ~ nav .navBarItems ul {
+    display: block;
     text-align: center;
   }
-
-  .menu-icon {
+  .wrapper {
+    position: static;
+    height: fit-content;
+    width: 100vw;
+  }
+  nav {
+    position: static;
+    height: fit-content;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    position: absolute;
+    margin: 0;
+    width: fit-content;
+    height: fit-content;
+    left: -50px;
+    top: -50px;
+  }
+  br {
+    display: inline-block;
+    height: 0;
+    width: 0;
+    line-height: 0;
+  }
+  .logo img {
+    transform: scale(0.5);
+  }
+  .bigImage {
+    height: fit-content;
+  }
+  .smallImage {
+    height: fit-content;
+  }
+  nav ul {
+    background-color: #464646;
+  }
+  logo {
+    height: 80px;
+  }
+  logo img {
+    height: 100%;
+    width: 100%;
+  }
+  .showNavBarButton {
     display: block;
+  }
+  .smallSizeNavBarButtonContainer {
+    height: 100px;
+    background: none;
   }
 }

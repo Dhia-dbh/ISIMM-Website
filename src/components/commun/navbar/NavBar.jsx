@@ -1,12 +1,12 @@
-import { NavBarItemMenuless } from "./NavBarItemMenuless";
-import NavBarItemMenu from "./navBarItemMenu";
-
 import { useState, useEffect } from "react";
+import NavBarItemMenu from "./navBarItemMenu";
+import { VscThreeBars } from "react-icons/vsc";
+import { NavBarItemMenuless } from "./NavBarItemMenuless";
 
-import "./navBar.css";
-import logo from "/src/assets/logo2.png";
+import "./NavBar.css";
+import logo from "/src/assets/logoNoBg.png";
 
-const NavBar = ({ items }) => {
+const NavBar = ({ items, isScrolledHeight }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isScrolled, setScrolled] = useState(false);
   const [logoSize, setLogoSize] = useState("150px"); // Logo Size ISIMM
@@ -21,7 +21,7 @@ const NavBar = ({ items }) => {
       setScrollPosition(currentScrollPosition);
 
       // Adjust logo size based on the scroll position
-      if (currentScrollPosition > 300) {
+      if (currentScrollPosition > isScrolledHeight) {
         setScrolled(true);
         setLogoSize("80px");
       } else {
@@ -43,11 +43,12 @@ const NavBar = ({ items }) => {
   return (
     <div className="wrapper">
       <header>
+        <input type="checkbox" name="showNavBar" id="showNavBar" />
         <nav className={isScrolled ? "isScrolledNavBar" : "notScrolledNavBar"}>
           <div className="menu-icon">
             <i className="fa fa-bars fa-2x"></i>
           </div>
-          <div className="logo">
+          <div className={"logo " + (isScrolled ? "smallImage" : "bigImage")}>
             <img
               src={logo}
               alt="ISIMM"
@@ -55,10 +56,13 @@ const NavBar = ({ items }) => {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              height={logoSize}
             />
           </div>
-          <div className="">
+          <label className="showNavBarButton" htmlFor="showNavBar">
+            <VscThreeBars />
+          </label>
+          <div className="smallSizeNavBarButtonContainer"></div>
+          <div className="navBarItems">
             <ul>
               {items.map((item, _key) => {
                 return item.submenu ? (

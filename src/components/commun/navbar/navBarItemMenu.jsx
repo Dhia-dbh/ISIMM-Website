@@ -43,6 +43,7 @@ const NavBarItemMenu = ({ _key, isScrolled, item }) => {
 
       <section ref={navBarItemDropdownMenuRef} style={{ display: "none" }}>
         <DropDownMenu
+          _key={_key}
           isScrolled={isHovered | isScrolled ? true : false}
           items={item.submenu}
         />
