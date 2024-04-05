@@ -1,20 +1,46 @@
 import { useState } from "react";
-import {}
+
 import NavBar2 from "../commun/navbar/NavBar2";
-import "./login.css";
 import isimm1 from "../../assets/logoNoBg.png";
+import axios from '../../api/axios'
+
+import "./login.css";
 function Login() {
+  const LOGIN_URL = '/api/authenticate';
   const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const handleSubmit = (e) => {
+  const [errorMsg, setErrorMsg] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!PASSWORD_REGEX.test(password)){
       alert("Please enter a valid password"); //TODO: replace alert with tostify
+      setErrorMsg("Please enter a valid password")
       return
     }
-    
+    try{
+      const response = await axios.post(LOGIN_URL, JSON.stringify({
+        email: username, password, rememberMe
+      }), 
+      {
+        headers: {"Content-Type": 'application/json'},
+        withCredentials: true
+      }
+    );
+    console.log(response?.accessToken);
+    setEmail("");
+    setPassword("");
+    }catch(err){
+    if ( !err?.response ) {
+    setErrorMsg('No Server Response') ;
+    } else if (err. response?.status == 409){
+    setErrorMsg('Username Taken');
+    } else {
+    setErrorMsg('Registration Failed');
+    }
+  } 
   }
   return (
     <div class="background">
@@ -26,6 +52,14 @@ function Login() {
             </h5>
           </div>
           <h1>Login</h1>
+          {
+            errorMsg
+            ?
+            <div class="alert alert-danger" role="alert">
+              {errorMsg}
+            </div>
+            :null
+          }
         <form onSubmit={handleSubmit}>
 
           <label htmlFor="email">E-Mail </label>
@@ -44,5 +78,6 @@ function Login() {
     </div>
   );
 }
+
 
 export default Login;
