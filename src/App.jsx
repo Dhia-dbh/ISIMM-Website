@@ -26,99 +26,99 @@ import FormationLM from "./components/Formations/Formation (LM)";
 import FormationMRGL from "./components/Formations/Formation (MRGL)";
 import FormationMRMI from "./components/Formations/Formation (MRMI)";
 import Formations from "./components/Formations/Formations";
+import RequireAuth from "./components/commun/requireAuth";
 
 function App() {
   const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Navigate to={"/home"} />,
-    },
-    {
-      path: "/home",
-      element: <Home />,
-    },
-    {
-      path: "/formation",
-      element: <Formations/>,
-    }
-    ,
-    {
-      path: "/formation/LM",
-      element: <FormationLM/>
-    },
-    {
-      path : "/formation/MIM",
-      element: <FormationMIM/>
-    },
-    {
-      path: "/formation/MRGL",
-      element : <FormationMRGL/>
-    },
-    {
-      path : "/formation/MRMI",
-      element : <FormationMRMI/>
-    }
-    ,
     {
       path: "/Login",
       element: <Login />,
     },
     {
-      path: "/etudiants/etudiantListe",
-      element: <EtudiantListe />,
-    },
-    {
-      path: "/etudiants/emploiDeTemps",
-      element: <Emploi_etudiant />,
-    },
-    {
-      path: "/etudiants/examens",
-      element: <List_examan />,
-    },
-    {
-      path: "/etudiants/profile",
-      element: <Profile_etudiant />,
-    },
-    {
-      path: "/etudiants/notes",
-      element: <Note_Tab />,
-    },
-    {
-      path: "/entreprise",
-      element: <Entreprise />,
-    },    
-    {
-      path: "/etudiants/notes2",
-      element: <Notes />,
-    },
-    {
-      path: "/entreprise",
-      element: <Entreprise />,
-    },
-    {
-      path: "/actualite",
-      element: <Actual />,
-    },
-    {
-      path: "/etudiants/clubs",
-      element: <Clubs/>,
-    },
+      element: <RequireAuth />,
+      children: [
+        {
+          path: "/",
+          element: <Navigate to={"/home"} />,
+        },
+        {
+          path: "/home",
+          element: <Home />,
+        },
+        {
+          path: "/formation",
+          element: <Formations />,
+        },
+        {
+          path: "/formation/LM",
+          element: <FormationLM />,
+        },
+        {
+          path: "/formation/MIM",
+          element: <FormationMIM />,
+        },
+        {
+          path: "/formation/MRGL",
+          element: <FormationMRGL />,
+        },
+        {
+          path: "/formation/MRMI",
+          element: <FormationMRMI />,
+        },
+        {
+          path: "/etudiants/etudiantListe",
+          element: <EtudiantListe />,
+        },
+        {
+          path: "/etudiants/emploiDeTemps",
+          element: <Emploi_etudiant />,
+        },
+        {
+          path: "/etudiants/examens",
+          element: <List_examan />,
+        },
+        {
+          path: "/etudiants/profile",
+          element: <Profile_etudiant />,
+        },
+        {
+          path: "/etudiants/notes",
+          element: <Note_Tab />,
+        },
+        {
+          path: "/entreprise",
+          element: <Entreprise />,
+        },
+        {
+          path: "/etudiants/notes2",
+          element: <Notes />,
+        },
+        {
+          path: "/entreprise",
+          element: <Entreprise />,
+        },
+        {
+          path: "/actualite",
+          element: <Actual />,
+        },
+        {
+          path: "/etudiants/clubs",
+          element: <Clubs />,
+        },
 
-    ,
-    { path: "/administration/documents",
-    element: <Demande_Doc_Admin/>,
-   },
-    { path: "/administration/departements",
-    element: <Departements/>,
-   },
-    
-    {
-      path: "/*",
-      element: <NotFound />,
-    },
-    {
-      path: "/actualites",
-      element: <Actual />,
+        ,
+        { path: "/administration/documents", element: <Demande_Doc_Admin /> },
+        { path: "/administration/departements", element: <Departements /> },
+
+        {
+          path: "/*",
+          element: <NotFound />,
+        },
+        {
+          path: "/actualites",
+          element: <Actual />,
+        },
+      ],
     },
   ]);
   const styles = {
@@ -128,7 +128,7 @@ function App() {
   };
   return (
     <>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
       <RouterProvider router={router} />
     </>

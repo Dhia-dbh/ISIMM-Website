@@ -1,13 +1,20 @@
 import { useState } from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import NavBar2 from "../commun/navbar/NavBar2";
+import useAuth from "../hooks/useAuth";
+
 import isimm1 from "../../assets/logoNoBg.png";
-import axios from '../../api/axios'
+import axios from "axios";
 
 import "./login.css";
 function Login() {
-  const LOGIN_URL = '/api/authenticate';
-  const PASSWORD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/
+  const LOGIN_URL = "/api/authenticate";
+  const PASSWORD_REGEX =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,32}$/;
+  const { setAuth } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,58 +22,78 @@ function Login() {
   const [rememberMe, setRememberMe] = useState(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!PASSWORD_REGEX.test(password)){
+    setErrorMsg();
+    //if (!PASSWORD_REGEX.test(password)){
+    if (false) {
       alert("Please enter a valid password"); //TODO: replace alert with tostify
-      setErrorMsg("Please enter a valid password")
-      return
+      setErrorMsg("Please enter a valid password");
+      return;
     }
-    try{
-      const response = await axios.post(LOGIN_URL, JSON.stringify({
-        email: username, password, rememberMe
-      }), 
-      {
-        headers: {"Content-Type": 'application/json'},
-        withCredentials: true
+    try {
+      const response = await axios.post(
+        LOGIN_URL,
+        JSON.stringify({
+          //username: email, password, rememberMe
+          username: "admin",
+          password: "admin",
+          rememberMe: false,
+        }),
+        {
+          headers: { "Content-Type": "application/json" },
+          withCredentials: false,
+        }
+      );
+      const idToken = response?.data?.id_token;
+      setAuth(idToken);
+      setEmail("");
+      setPassword("");
+      console.log("from: ", from);
+      navigate(from, { replace: true });
+    } catch (err) {
+      if (!err?.response) {
+        setErrorMsg("No Server Response");
+      } else if (err.response?.status == 400) {
+        setErrorMsg("Missing Email or Password");
+      } else if (err.response?.status == 401) {
+        setErrorMsg("Unauthorized");
+      } else {
+        setErrorMsg("Login Failed");
       }
-    );
-    console.log(response?.accessToken);
-    setEmail("");
-    setPassword("");
-    }catch(err){
-    if ( !err?.response ) {
-    setErrorMsg('No Server Response') ;
-    } else if (err. response?.status == 409){
-    setErrorMsg('Username Taken');
-    } else {
-    setErrorMsg('Registration Failed');
     }
-  } 
-  }
+  };
   return (
-    <div class="background">
+    <div className="background">
       <div id="forum_login">
-          <div class="title">
-            <img src={isimm1} class="imge"></img>
-            <h5>
-              institut supérieur d'informatique et de mathématiques de monastir
-            </h5>
+        <div className="title">
+          <img src={isimm1} className="imge"></img>
+          <h5>
+            institut supérieur d'informatique et de mathématiques de monastir
+          </h5>
+        </div>
+        <h1>Login</h1>
+        {errorMsg ? (
+          <div className="alert alert-danger" role="alert">
+            {errorMsg}
           </div>
-          <h1>Login</h1>
-          {
-            errorMsg
-            ?
-            <div class="alert alert-danger" role="alert">
-              {errorMsg}
-            </div>
-            :null
-          }
+        ) : null}
         <form onSubmit={handleSubmit}>
-
           <label htmlFor="email">E-Mail </label>
-          <input id="email" type="email" placeholder="Flen.Fouleni@gmail.com" onChange={setEmail} />
+          <input
+            id="email"
+            type="text"
+            placeholder="Flen.Fouleni@gmail.com"
+            onChange={setEmail}
+          />
           <br />
-          <div><label htmlFor="password">Password </label></div>
-          <input id="password" type="password" placeholder="Password" onChange={setPassword} />
+          <div>
+            <label htmlFor="password">Password </label>
+          </div>
+          <input
+            id="password"
+            type="password"
+            placeholder="Password"
+            onChange={setPassword}
+          />
           <br />
           <button> Login </button>
           <br></br>
@@ -78,6 +105,5 @@ function Login() {
     </div>
   );
 }
-
 
 export default Login;
