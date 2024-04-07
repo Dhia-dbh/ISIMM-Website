@@ -68,13 +68,13 @@ const NavBar = ({ items, isScrolledHeight }) => {
                 return item.submenu ? (
                   <NavBarItemMenu
                     onHover={handleMouseEnter}
-                    _key={_key}
+                    _key={"Menu" + _key}
                     isScrolled={isScrolled}
                     item={item}
                   />
                 ) : (
                   <NavBarItemMenuless
-                    _key={_key}
+                    _key={"MenuLess" + _key}
                     isScrolled={isScrolled}
                     item={item}
                   />

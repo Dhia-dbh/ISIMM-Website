@@ -27,8 +27,18 @@ import FormationMRGL from "./components/Formations/Formation (MRGL)";
 import FormationMRMI from "./components/Formations/Formation (MRMI)";
 import Formations from "./components/Formations/Formations";
 import RequireAuth from "./components/commun/requireAuth";
+/**
+ * DELETE JUST FOR TESTING
+ */
+import useAuth from "./hooks/useAuth";
 
 function App() {
+  /**
+   * DELETE JUST FOR TESTING
+   */
+  const { auth } = useAuth();
+  console.log("Auth in home: ", auth?.id_token);
+  console.log("auth?.id_token: ", auth?.id_token);
   const router = createBrowserRouter([
     {
       path: "/Login",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
-import useAuth from "../hooks/useAuth";
+import useAuth from "../../hooks/useAuth";
 
 import isimm1 from "../../assets/logoNoBg.png";
 import axios from "axios";
@@ -44,7 +44,7 @@ function Login() {
         }
       );
       const idToken = response?.data?.id_token;
-      setAuth(idToken);
+      setAuth({ id_token: idToken });
       setEmail("");
       setPassword("");
       console.log("from: ", from);

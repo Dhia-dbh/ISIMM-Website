@@ -1,4 +1,5 @@
 import "./dropDownMenu.css";
+import NavBarItem from "./navBarItem";
 
 const DropDownMenu = ({ _key, isScrolled, items }) => {
   //Only allow the display of submenus if scrolled
@@ -14,13 +15,7 @@ const DropDownMenu = ({ _key, isScrolled, items }) => {
         return (
           <>
             <li key={_key} className="drowDownMenuItem">
-              <a
-                key={_key}
-                className={isScrolled ? "isScrolled" : "notScrolled"}
-                href={item.path}
-              >
-                {item.name}
-              </a>
+              <NavBarItem _key={_key} isScrolled={isScrolled} item={item} />
             </li>
           </>
         );

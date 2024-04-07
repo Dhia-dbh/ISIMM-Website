@@ -1,17 +1,20 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 export default function NavBarItem({ _key, isScrolled, item }) {
   const location = useLocation();
   const currentPath = location.pathname; // Get the entire path after domain
-
+  const navigate = useNavigate();
   return (
     <a
       key={_key}
-      className={isScrolled ? "isScrolledText" : "notScrolledText"}
-      href={item.path}
+      className={
+        "linkTo " + (isScrolled ? "isScrolledText" : "notScrolledText")
+      }
+      href={"#"}
       onClick={(e) => {
-        if (currentPath === item.path) {
-          e.preventDefault();
+        e.preventDefault();
+        if (currentPath !== item.path) {
+          navigate(item.path);
         }
       }}
     >
