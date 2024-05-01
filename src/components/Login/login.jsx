@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import Cookies from "js-cookie";
 
 import useAuth from "../../hooks/useAuth";
 
@@ -47,6 +48,11 @@ function Login() {
       setAuth({ id_token: idToken });
       setEmail("");
       setPassword("");
+      Cookies.set("isimmAuthToken", idToken, {
+        expires: (1 / 24 / 60) * 1,
+        secure: true,
+        httpOnly: false,
+      });
       console.log("from: ", from);
       navigate(from, { replace: true });
     } catch (err) {
