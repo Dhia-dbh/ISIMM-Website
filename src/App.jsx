@@ -81,7 +81,7 @@ function App() {
         },
         {
           path: "/etudiants/emploiDeTemps",
-          element: <Emploi_etudiant />,
+          element: <Emploi_etudiant auth={auth} />,
         },
         {
           path: "/etudiants/examens",

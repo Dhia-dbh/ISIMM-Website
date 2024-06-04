@@ -5,20 +5,54 @@ import Session_item from "./session_item";
 import html2pdf from "html2pdf.js";
 import NavBar2 from "../commun/navbar/NavBar2";
 import Footer1 from "../Footer_1/Footer_1";
-
+import "../../hooks/useAuth";
 import courses from "../../Data/classes.json";
 import emploi from "../../Data/emploi.json";
+import axios from "axios";
 
-function Emploi_etudiant() {
+function Emploi_etudiant({ auth }) {
   //const [coursesData, setCoursesData] = useState([]);
   const [classe, setClasse] = useState("");
   const [filiere, setFiliere] = useState("");
   const [TD, setTD] = useState("");
   const [classeFiliereTD, setClasseFiliereTD] = useState("");
-  const generatePdf = () => {
-    const element = document.getElementById("Tab");
-    html2pdf(element);
-  };
+
+  async function generatePdf() {
+    //const element = document.getElementById("Tab");
+    //html2pdf(element);
+    try {
+      const headers = new Headers({
+        Authorization: "Bearer " + auth?.id_token, // Replace with actual token
+      });
+      console.log("token: ", "Bearer " + auth?.id_token);
+      const response = await fetch("http://localhost:8080/api/download-pdf", {
+        method: "GET",
+        headers: headers,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const blob = await response.blob();
+
+      const url = window.URL.createObjectURL(blob);
+
+      // Create a temporary anchor element to trigger download
+      const downloadLink = document.createElement("a");
+      downloadLink.href = url;
+      downloadLink.download =
+        "Emploi " + classe + " " + filiere + " " + TD + ".pdf";
+      downloadLink.style.display = "none"; // Hide the link
+
+      // Append and trigger click immediately (no need to remove)
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+    } catch (error) {
+      console.error("Error downloading PDF:", error);
+      // Handle errors appropriately, like displaying an error message to the user
+    }
+  }
   let tab;
   if (TD !== "") {
     tab = (
@@ -327,7 +361,7 @@ function Emploi_etudiant() {
 
         <div id="table">
           {tab}
-          <button class="btn btn-primary" onClick={generatePdf()}>
+          <button class="btn btn-primary" onClick={generatePdf}>
             Imprimer
           </button>
         </div>
